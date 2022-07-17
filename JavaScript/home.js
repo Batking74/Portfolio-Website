@@ -1,3 +1,19 @@
+// Countdown
+  // Step 1. What element do we want to animate?
+  const countdown = document.querySelector("#countdown");
+  // Step 2. What function will change it each time?
+  const countItDown = () => {
+    const currentTime = parseFloat(countdown.textContent);
+    if (currentTime > 0) {
+       countdown.textContent = currentTime - 1;   
+    } else {
+        window.clearInterval(timer);
+    }
+    
+  };
+  // Step 3: Call that on an interval
+  var timer = window.setInterval(countItDown, 1000);
+
 // Toggle Navbar
 const toggleBtn = document.querySelector('.toggle-btn');
 const linkContainer = document.querySelector('.links-container');
@@ -94,31 +110,28 @@ myProjectsArray.forEach(project => {
 
 // Contact Form
 const form = document.querySelector('#form');
-const contactBtn = document.querySelector('.contact-btn');
+const contactBtn = document.querySelector('#contact-btn');
 const firstName = document.querySelector('.first-name');
 const lastName = document.querySelector('.last-name');
 const email = document.querySelector('.email');
 const msg = document.querySelector('.message');
 const formError = document.querySelectorAll('.validationError');
 
-const validateNames = () => {
-    if(firstName.value === '') {
-        formError.innerHTML = 'This is required!';
-    }
-};
-
-contactBtn.addEventListener('click', (stop) => {
-    stop.preventDefault();
-    validateNames();
-    // validateEmail();
-    // validateMSG();
+contactBtn.addEventListener('submit', () => {
+    preventDefault();
+    console.log('Myname')
+    // validateNames();
     form.reset();
     }
 )
 
-const validateEmail = () => {
+// const validateNames = () => {
 
-};
-const validateMSG = () => {
+// };
 
-};
+// const validateEmail = () => {
+
+// };
+// const validateMSG = () => {
+
+// };
