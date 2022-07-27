@@ -109,29 +109,31 @@ myProjectsArray.forEach(project => {
 })
 
 // Contact Form
-const form = document.querySelector('#form');
-const contactBtn = document.querySelector('#contact-btn');
-const firstName = document.querySelector('.first-name');
-const lastName = document.querySelector('.last-name');
-const email = document.querySelector('.email');
-const msg = document.querySelector('.message');
-const formError = document.querySelectorAll('.validationError');
+const form = document.getElementById('form');
+const contactBtn = document.getElementById('contact-btn');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const email = document.getElementById('email');
+const msg = document.getElementById('message');
+const formError = document.getElementById('validationError');
 
-contactBtn.addEventListener('submit', () => {
-    preventDefault();
-    console.log('Myname')
-    // validateNames();
-    form.reset();
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.validateNames();
     }
 )
 
-// const validateNames = () => {
+validateNames() = new Promise((resolve, reject) => {
+    if(firstName.value === '' || firstName.value === null || lastName.value === '' || lastName.value === null || email.value === '' || email.value === null || msg.value === '' || msg.value === null || formError.value === '' || formError.value === null) {
+        reject('All feilds are required!')
+    } else {
+        resolve('Processing...')
+    }
+}).then(() => {
+    setTimeout(console.log('Complete!'), 2000);
+    window.location.href = 'http://127.0.0.1:5555/HTML/thankYou.html?';
+}).catch((message) => {
+    console.log(message);
+})
 
-// };
-
-// const validateEmail = () => {
-
-// };
-// const validateMSG = () => {
-
-// };
+console.log(validateNames);
