@@ -11,7 +11,7 @@ html {
 body {
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg,#0000ff, #ffffff, #0000ff);
+    background: linear-gradient(180deg,#0000ff, #000000, #0000ff);
     color: #e1dad5;
     font-family: 'roboto', sans-serif;
 }
@@ -76,6 +76,14 @@ body {
     height: 1px;
     background: #e1dad5;
 
+}
+
+#Countdown-Text {
+    color: #e2d220;
+}
+
+#countdown {
+    color: rgb(216, 25, 25);
 }
 
 .home {
@@ -154,10 +162,10 @@ body {
     background: #964320;
     color: #ffffff;
     text-transform: capitalize;
+    transition: 2s;
 }
 
 .btn:hover, .btn:focus, .music-btn:hover, .music-btn:focus {
-    transition: 2s;
     transform: scale(1.1);
     transition-duration: 2s;
     cursor: pointer;
@@ -208,11 +216,12 @@ body {
 }
 
 .left-col::before {
-    content: 'Bald head';
+    content: 'SaloneFunnyBad';
     text-transform: capitalize;
+    transform: rotate(30deg);
     position: absolute;
     right: 0;
-    top: -20px;
+    top: -25px;
 }
 
 .left-col::after {
@@ -419,11 +428,11 @@ body {
 }
 
 .changeNavColorByToggle {
-    background: linear-gradient(90deg,#0000ff, #ffffffcb, #0000ff);
+    background: linear-gradient(90deg,#0000ff, #131313b1, #0000ff);
 }
 
 .footerBackgroundColorToggle {
-    background: linear-gradient(90deg,#0000ff, #ffffffcb, #0000ff);
+    background: linear-gradient(90deg,#0000ff, #d1d1d1cb, #0000ff);
     color: #000000;
 }
 

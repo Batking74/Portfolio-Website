@@ -8,6 +8,7 @@
        countdown.textContent = currentTime - 1;   
     } else {
         window.clearInterval(timer);
+        location.replace('https://www.instagram.com/techknuckles/')
     }
     
   };
@@ -51,9 +52,9 @@ playMusic.addEventListener('click', () => {
 
 // Speechsynthesis
 const playButton = document.getElementById('play-button');
-const textInput = document.getElementById('ReadTextAI');
+const aboutPElement = document.getElementById('ReadTextAI');
 playButton.addEventListener('click', () => {
-    playText(textInput.textContent);
+    playText(aboutPElement.textContent);
     playButton.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
     playButton.addEventListener('click', () => {
         speechSynthesis.cancel();
@@ -61,11 +62,16 @@ playButton.addEventListener('click', () => {
         playButton.reset();
     })
 })
+
 const playText = (text) => {
-    const utterance = new SpeechSynthesisUtterance(text)
+    const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 1;
-    speechSynthesis.speak(utterance)
+    speechSynthesis.speak(utterance);
     }
+
+// const stopText = (text) => {
+
+//     }
 
 // Filter Projects
 const filter = document.querySelectorAll('.filter-btn');
@@ -109,31 +115,31 @@ myProjectsArray.forEach(project => {
 })
 
 // Contact Form
-const form = document.getElementById('form');
-const contactBtn = document.getElementById('contact-btn');
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
-const email = document.getElementById('email');
-const msg = document.getElementById('message');
-const formError = document.getElementById('validationError');
+// const form = document.getElementById('form');
+// const contactBtn = document.getElementById('contact-btn');
+// const firstName = document.getElementById('first-name');
+// const lastName = document.getElementById('last-name');
+// const email = document.getElementById('email');
+// const msg = document.getElementById('message');
+// const formError = document.getElementById('validationError');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.validateNames();
-    }
-)
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     e.validateNames();
+//     }
+// )
 
-validateNames() = new Promise((resolve, reject) => {
-    if(firstName.value === '' || firstName.value === null || lastName.value === '' || lastName.value === null || email.value === '' || email.value === null || msg.value === '' || msg.value === null || formError.value === '' || formError.value === null) {
-        reject('All feilds are required!')
-    } else {
-        resolve('Processing...')
-    }
-}).then(() => {
-    setTimeout(console.log('Complete!'), 2000);
-    window.location.href = 'http://127.0.0.1:5555/HTML/thankYou.html?';
-}).catch((message) => {
-    console.log(message);
-})
+// validateNames() = new Promise((resolve, reject) => {
+//     if(firstName.value === '' || firstName.value === null || lastName.value === '' || lastName.value === null || email.value === '' || email.value === null || msg.value === '' || msg.value === null || formError.value === '' || formError.value === null) {
+//         reject('All feilds are required!')
+//     } else {
+//         resolve('Processing...')
+//     }
+// }).then(() => {
+//     setTimeout(console.log('Complete!'), 2000);
+//     window.location.href = 'http://127.0.0.1:5555/HTML/thankYou.html?';
+// }).catch((message) => {
+//     console.log(message);
+// })
 
-console.log(validateNames);
+// console.log(validateNames);
