@@ -2,17 +2,19 @@
   // Step 1. What element do we want to animate?
   const countdown = document.querySelector("#countdown");
   // Step 2. What function will change it each time?
+
   const countItDown = () => {
     const currentTime = parseFloat(countdown.textContent);
     if (currentTime > 0) {
        countdown.textContent = currentTime - 1;   
     } else {
         window.clearInterval(timer);
-        location.replace('https://www.instagram.com/techknuckles/')
+        location.replace('https://www.instagram.com/mr_blacknificent/')
     }
     
   };
-  // Step 3: Call that on an interval
+
+//   Step 3: Call that on an interval
   var timer = window.setInterval(countItDown, 1000);
 
 // Toggle Navbar
@@ -53,7 +55,7 @@ playMusic.addEventListener('click', () => {
 // Speechsynthesis
 const playButton = document.getElementById('play-button');
 const aboutPElement = document.getElementById('ReadTextAI');
-playButton.addEventListener('click', () => {
+playButton.addEventListener('click', (e) => {
     playText(aboutPElement.textContent);
     playButton.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
     playButton.addEventListener('click', () => {
@@ -68,10 +70,6 @@ const playText = (text) => {
     utterance.rate = 1;
     speechSynthesis.speak(utterance);
     }
-
-// const stopText = (text) => {
-
-//     }
 
 // Filter Projects
 const filter = document.querySelectorAll('.filter-btn');
@@ -115,31 +113,54 @@ myProjectsArray.forEach(project => {
 })
 
 // Contact Form
-// const form = document.getElementById('form');
-// const contactBtn = document.getElementById('contact-btn');
-// const firstName = document.getElementById('first-name');
-// const lastName = document.getElementById('last-name');
-// const email = document.getElementById('email');
-// const msg = document.getElementById('message');
-// const formError = document.getElementById('validationError');
+const form = document.getElementById('form');
+const contactBtn = document.getElementById('contact-btn');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const email = document.getElementById('email');
+const msg = document.getElementById('message');
+const formError = document.getElementById('validationError');
+const userInfo = [firstName, lastName, email, msg];
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     e.validateNames();
-//     }
-// )
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validateUserInput();
+    sendEmail();
+    }
+)
 
-// validateNames() = new Promise((resolve, reject) => {
-//     if(firstName.value === '' || firstName.value === null || lastName.value === '' || lastName.value === null || email.value === '' || email.value === null || msg.value === '' || msg.value === null || formError.value === '' || formError.value === null) {
-//         reject('All feilds are required!')
-//     } else {
-//         resolve('Processing...')
-//     }
-// }).then(() => {
-//     setTimeout(console.log('Complete!'), 2000);
-//     window.location.href = 'http://127.0.0.1:5555/HTML/thankYou.html?';
-// }).catch((message) => {
-//     console.log(message);
-// })
+function validateUserInput() {
+    new Promise((resolve, reject) => {
+        if(userInfo[0, 1, 2, 3].value == '') {
+            reject('All feilds must be filled out!');
+        }
+        else if(userInfo[0, 1, 2].value == '') {
+            reject('All feilds must be filled out!');
+        }
+        else {
+            resolve('Processing...')
+        }
+    }).then(() => {
+        setTimeout(console.log('Complete!'), 2000);
+        window.location.href = 'http://127.0.0.1:5555/HTML/thankYou.html?';
+    }).catch((message) => {
+        alert(message);
+    })
+}
 
-// console.log(validateNames);
+function sendEmail() {
+    Email.send({
+        Host : 'smtp.elasticemail.com',
+        Username : 'nazirknuckles@gmail.com',
+        Password : '5DB14C00F5337AB8773C8F0FF81E5F4B7206',
+        SecureToken : "f6556e03-5b1c-4695-b449-486411aa4870",
+        To : 'Batking74@gmail.com',
+        From : email.value,
+        Subject : "New User!",
+        Body : msg.value
+    }).then(
+      message => alert(message)
+    )
+}
+
+// Password: CF091EA55BBA14A75489BB19AE5132FD49BE
