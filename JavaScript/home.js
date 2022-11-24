@@ -154,7 +154,7 @@ function sendEmail() {
         Username : 'nazirknuckles@gmail.com',
         Password : '5DB14C00F5337AB8773C8F0FF81E5F4B7206',
         SecureToken : "f6556e03-5b1c-4695-b449-486411aa4870",
-        To : 'Batking74@gmail.com',
+        To : 'Hello@gmail.com',
         From : email.value,
         Subject : "New User!",
         Body : msg.value
@@ -162,5 +162,6 @@ function sendEmail() {
       message => alert(message)
     )
 }
+
 
 // Password: CF091EA55BBA14A75489BB19AE5132FD49BE
