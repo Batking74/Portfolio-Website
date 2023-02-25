@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/Projects/Static_Landing_Page_2/IMGS/bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.nav-container {
+    position: absolute;
+    right: 50px;
+    top: 3%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.myLogo-bg {
+    background-color: #ffffff;
+    padding: 0 3vmax 0 3vmax;
+    width: 300px;
+    height: 745px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.myLogo-bg img {
+    width: 300px;
+}
+
+/* iPad Pro */
+@media screen and (max-width: 1024px) {
+
+    .nav-container {
+        gap: 30%;
+        right: 48%;
+        top: 20%;
+    }
+
+    .nav-container a {
+        color: #000000;
+        font-size: xx-large;
+    }
+    
+    .myLogo-bg {
+        width: 100%;
+        padding: 2vmax 0 3vmax 0;
+        height: 20vmax;
+        flex-direction: column;
+    }
+
+    .myLogo-bg img {
+        width: 16vmax;
+    }
+}
+
+/* iPad */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        gap: 16%;
+        right: 38%;
+        top: 20%;
+    }
+
+    .nav-container a {
+        font-size: x-large;
+    }
+    
+    .myLogo-bg {
+        width: 100%;
+        padding: 2vmax 0 3vmax 0;
+        height: 20vmax;
+        flex-direction: column;
+    }
+
+    .myLogo-bg img {
+        width: 15vmax;
+    }
+}
+
+/* Iphone X */
+@media screen and (max-width: 375px) {
+    .nav-container {
+        right: 3vmax;
+        top: 15%;
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-container a {
+        color: #000000;
+        font-size: 15px;
+    }
+    
+    .myLogo-bg {
+        width: 100%;
+        padding: 2vmax 0 3vmax 0;
+        height: 15vmax;
+        flex-direction: column;
+    }
+
+    .myLogo-bg img {
+        width: 10vmax;
+    }
+}
