@@ -235,7 +235,6 @@ export function getNavigator(index) {
 
 openMenu.addEventListener('click', () => {
     navStoreBlueprint[i2.nav].classList.toggle('active');
-    console.log('click')
 });
 
 // Dynamic Indexes

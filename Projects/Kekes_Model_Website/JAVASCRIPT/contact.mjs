@@ -37,7 +37,7 @@ formContactInfo.innerHTML = `
         <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][13]}" alt="Instagram Icon">
     </a>
     <a href="${navStoreBlueprint[i2.navLin][8]}">
-        <img class="${navStoreBlueprint[i.attrb][3]}" src="${navStoreBlueprint[i2.icons][14]}" alt="Twitter Icon">
+        <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][14]}" alt="Twitter Icon">
     </a>
     <a href="${navStoreBlueprint[i2.navLin][9]}">
         <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][15]}" alt="YouTube Icon">

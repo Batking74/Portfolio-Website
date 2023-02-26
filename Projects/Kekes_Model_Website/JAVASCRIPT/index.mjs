@@ -16,7 +16,7 @@ for(let index = 0; index < animate.length; index++) {
 
 // Toggle Hamburger menu
 openMenu.addEventListener('click', (e) => {
-    sideNavigation.classList.toggle('active');
+    navStoreBlueprint[i2.nav].classList.toggle('active');
 });
 
 // Creating Dynamic Project Card
