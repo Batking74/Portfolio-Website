@@ -87,6 +87,7 @@ export default class App extends React.Component {
   
   render() {
     docTitle.textContent = `Nazir's Portfolio`;
+    const aboutAlt = "Me (Naz) 17 years old (Senior Year)";
     console.log(this.props.age)
     const item0 = new App(name[0], tag[0], image[2], link[0]);
     const item1 = new App(name[1], tag[1], image[3], link[1]);
@@ -97,27 +98,6 @@ export default class App extends React.Component {
     const item6 = new App(name[6], tag[6], image[8], link[6]);
     const item7 = new App(name[7], tag[7], image[9], link[7]);
     const project = [item0, item1, item2, item3, item4, item5, item6, item7];
-
-
-
-    // function getProjects(e) {
-    //   const projectContainer = document.querySelector('.project-container');
-
-    //   myProjectsArray.forEach(project => {
-    //     projectContainer.innerHTML += `
-    //     <a href="${project.projectLink}">
-    //     <div class="project-card data-tags="#all, ${project.tags}">
-    //           <img src="${project.image}" alt="">
-    //           <div class="content">
-    //             <h1 class="project-name">${project.name}</h1>
-    //             <span class="tags">${project.tags}</span>
-    //           </div>
-    //           </div>
-    //           </a>
-    //       `;
-    //   })
-    //   console.log("Loaded up!")
-    // }
     
     // Contact Form Validation
     function validateUserInput(e) {
@@ -195,6 +175,11 @@ export default class App extends React.Component {
       })
     }
 
+    function getImageCaption() {
+      const p = document.getElementById('img-caption');
+      p.textContent = aboutAlt;
+    }
+
     // Rendering HTML
     return (
       <span>
@@ -206,7 +191,7 @@ export default class App extends React.Component {
           <span></span>
         </div>
         <ul className="links-container">
-          <li onClick={toggleLink} className={className[0]}><a href="#" className="link active">Home</a></li>
+          <li onClick={toggleLink} className={className[0]}><a href="#" className='link active'>Home</a></li>
           <li onClick={toggleLink} className={className[0]}><a href="#about-section" className={className[1]}>About</a></li>
           <li onClick={toggleLink} className={className[0]}><a href="#project-section" className={className[1]}>Project</a></li>
           <li onClick={toggleLink} className={className[0]}><a href="#contact-section" className={className[1]}>Contact</a></li>
@@ -239,7 +224,8 @@ export default class App extends React.Component {
         <div className={className[5]}></div>
         <div className="about-me-container">
           <div className="left-col">
-            <img src={image[1]} className="about-image" alt="Naz at age 17 (Senior Year)"/>
+            <img onClick={getImageCaption} src={image[1]} className="about-image" alt={aboutAlt}/>
+            <p id='img-caption'></p>
           </div>
           <div className="right-col">
             <p id="ReadTextAI" className="about-paragraph">Hello, I am Naz a k a Mr. Knuckles. I am not finnished my portfolio project, but when I do finnish I'll actually put something about me in this section. This portfolio project is actually almost done, unlike the "Keekee's Modeling Studio" project. All I have to do for this project is figure out how to program a few things, validate the form at the very bottom of this page, and make the users input send to my email (which is hard because for some reason my code wont run when I try to program user data to send to my email). Anyways, here is some Lorem Gibberish to keep you entertained. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ipsum autem quibusdam illo aliquid quia earum voluptates eum aliquam perspiciatis? Id tempora mollitia doloribus magnam vitae corporis USA Poddle, molestiae quae quam, praesentium exercitationem quidem at sapiente eius odit? Aliquam velit dolor aut totam exercitationem.</p>

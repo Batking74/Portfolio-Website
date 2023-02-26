@@ -39,6 +39,7 @@ body {
 .links-container {
   display: flex;
   list-style: none;
+  padding-left: 600px;
 }
 
 .link {
@@ -145,8 +146,8 @@ body {
 }
 
 .image {
-  width: calc(100% - 800px);
-  height: 400px;
+  width: calc(100% - 850px);
+  height: 450px;
 }
 
 .info {
@@ -216,12 +217,17 @@ body {
 }
 
 .left-col::before {
-  content: 'SaloneFunnyBad';
+  content: 'ME Nazz Una Kushe Kai Batua!!';
+  color: #ffff00;
+  font-family:'Times New Roman', Times, serif;
+  font-size: medium;
+  width: max-content;
   text-transform: capitalize;
   transform: rotate(30deg);
   position: absolute;
   right: 0;
-  top: -25px;
+  left: 330px;
+  top: -40px;
 }
 
 .left-col::after {
@@ -240,7 +246,12 @@ body {
   border-radius: 30px;
   box-shadow: 0 10px 10px #00000040;
   width: 70%;
-  height: 400px;
+  height: 430px;
+}
+
+#img-caption {
+  font-size: 17px;
+  margin: 15px 0 0 50px;
 }
 
 .about-paragraph {
@@ -454,6 +465,12 @@ body {
   color: #000000 !important;
 }
 
+@media screen and (max-width: 1400px) {
+  .links-container {
+    padding-left: 0;
+  }
+}
+
 /* tablet view */
 @media (max-width: 996px) {
   html {
@@ -531,6 +548,25 @@ body {
       margin: 40px;
   }
 
+  .left-col::before {
+    transform: rotate(15deg);
+    left: 150px;
+    top: -50px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  #img-caption {
+    font-size: 17px;
+    margin: 15px 25px 0 25px;
+  }
+
+  p, .sub-heading, .about-paragraph, .left-col::before, .tags, .right-col {
+    text-align: center;
+  }
+
   .hero-content {
       width: 70%;
       min-width: 350px;
@@ -573,7 +609,7 @@ body {
   }
 
   .about-image {
-      width: 90%;
+      width: 100%;
       margin: auto;
       display: block;
   }
