@@ -1,17 +1,17 @@
-import { navStoreBlueprint, linkCSS, i } from "./Nav&Footer_Blueprint.mjs";
+import { navStoreBlueprint, linkCSS, i2 } from "./Nav&Footer_Blueprint.mjs";
 linkCSS('CSS/index.css');
 
 // Targeting Elements
-const animate = document.querySelectorAll(`.${navStoreBlueprint[i.attrb][0]}`);
-const animate2 = document.querySelectorAll(`.${navStoreBlueprint[i.attrb][1]}`);
+const animate = document.querySelectorAll(`.${navStoreBlueprint[i2.attrb][0]}`);
+const animate2 = document.querySelectorAll(`.${navStoreBlueprint[i2.attrb][1]}`);
 const imageContainer = document.querySelector('.Model-Gallery-Container');
 const openMenu = document.querySelector('#menu-open');
 const sideNavigation = document.querySelector('.nav-container');
 
 // Changes Load Animations
 for(let index = 0; index < animate.length; index++) {
-    animate[index].classList.replace(`${navStoreBlueprint[i.attrb][0]}`, "HomeAnimateGroup1");
-    animate2[index].classList.replace(`${navStoreBlueprint[i.attrb][1]}`, "HomeAnimateGroup2");
+    animate[index].classList.replace(`${navStoreBlueprint[i2.attrb][0]}`, "HomeAnimateGroup1");
+    animate2[index].classList.replace(`${navStoreBlueprint[i2.attrb][1]}`, "HomeAnimateGroup2");
 }
 
 // Toggle Hamburger menu
@@ -30,10 +30,10 @@ class myProjects {
 const name = ['Ariel', 'USA Paddle', 'Blessing Bengeh', 'Keke'];
 const tag = ['#Ariiaaann', '#Sierra Leone', '#PalmerSudios'];
 const image = new Array(4);
-image[0] = `${navStoreBlueprint[12]}/IMG/Models/Female/Model_3.jpg`;
-image[1] = `${navStoreBlueprint[12]}/IMG/Tiki.jpg`;
-image[2] = `${navStoreBlueprint[12]}/IMG/Models/Female/Model_4.jpg`;
-image[3] = `${navStoreBlueprint[12]}/IMG/Keke/Photo_3.jpg`;
+image[0] = `${navStoreBlueprint[i2.path]}/IMG/Models/Female/Model_3.jpg`;
+image[1] = `${navStoreBlueprint[i2.path]}/IMG/Tiki.jpg`;
+image[2] = `${navStoreBlueprint[i2.path]}/IMG/Models/Female/Model_4.jpg`;
+image[3] = `${navStoreBlueprint[i2.path]}/IMG/Keke/Photo_3.jpg`;
 
 // Creating Models
 const item1 = new myProjects(name[0], tag[0], image[0]);

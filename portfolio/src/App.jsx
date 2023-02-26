@@ -234,7 +234,7 @@ export default class App extends React.Component {
         </div>
 
         {/* Skills Section */}
-        <h2 id={className[2]} className={className[4]}>Languages, frameworks, and tools I know</h2>
+        <h2 id={className[2]} className={className[4]}>Languages, frameworks, and tools</h2>
         <div className={className[5]}></div>
         <div className={className[8]}>
           <div className={className[6]} style={{background: "--bg: #ffa600ac"}}>

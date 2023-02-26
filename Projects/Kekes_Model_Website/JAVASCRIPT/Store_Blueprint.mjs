@@ -1,9 +1,9 @@
-import { navStoreBlueprint, linkCSS } from "./Nav&Footer_Blueprint.mjs";
+import { navStoreBlueprint, linkCSS, i2 } from "./Nav&Footer_Blueprint.mjs";
 linkCSS('CSS/Store.css');
 
 // Dynamic HTML Page
 export const main = document.getElementsByTagName('main');
-const ads = `${navStoreBlueprint[12]}/IMG/Ads/Sale_ad_1.jpg`;
+const ads = `${navStoreBlueprint[i2.path]}/IMG/Ads/Sale_ad_1.jpg`;
 
 main[0].innerHTML = `
     <header>
@@ -63,9 +63,9 @@ rating[3] = '&#8902 &#8902 &#8902 &#8902';
 rating[4] = '&#8902 &#8902 &#8902 &#8902 &#8902';
 
 // Store Page Links
-pageLink[0] = `${navStoreBlueprint[12]}/HTML/Store/Page 1/Store_1.html`;
-pageLink[1] = `${navStoreBlueprint[12]}/HTML/Store/Page 2/Store_2.html`;
-pageLink[2] = `${navStoreBlueprint[12]}/HTML/Store/Page 3/Store_3.html`;
+pageLink[0] = `${navStoreBlueprint[i2.path]}/HTML/Store/Page 1/Store_1.html`;
+pageLink[1] = `${navStoreBlueprint[i2.path]}/HTML/Store/Page 2/Store_2.html`;
+pageLink[2] = `${navStoreBlueprint[i2.path]}/HTML/Store/Page 3/Store_3.html`;
 
 // Dynamic Elements
 setStoreName("Palmer Store");
@@ -213,8 +213,8 @@ export function validateNav(index) {
 
 export function getNavigator(index) {
     const attribute = new Array(4);
-    attribute[0] = `${navStoreBlueprint[12]}/IMG/Social Media Icons & Logos/Store_Navigation_Right_Arrow.png`;
-    attribute[1] = `${navStoreBlueprint[12]}/IMG/Social Media Icons & Logos/Store_Navigation_Left_Arrow.png`;
+    attribute[0] = `${navStoreBlueprint[i2.path]}/IMG/Social Media Icons & Logos/Store_Navigation_Right_Arrow.png`;
+    attribute[1] = `${navStoreBlueprint[i2.path]}/IMG/Social Media Icons & Logos/Store_Navigation_Left_Arrow.png`;
     attribute[2] = "Next-Page";
     attribute[3] = "Previous-Page";
     const nav = new Array(3);
@@ -234,7 +234,8 @@ export function getNavigator(index) {
 }
 
 openMenu.addEventListener('click', () => {
-    openMenu.classList.toggle('active');
+    navStoreBlueprint[i2.nav].classList.toggle('active');
+    console.log('click')
 });
 
 // Dynamic Indexes

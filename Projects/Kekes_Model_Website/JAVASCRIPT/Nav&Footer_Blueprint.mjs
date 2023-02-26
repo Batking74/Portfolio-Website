@@ -1,5 +1,5 @@
 import { companyInfo } from "./Credentials.mjs";
-export const navbar = document.querySelector('#navbar');
+export let navbar = document.querySelector('#navbar');
 export const footer = document.getElementsByTagName('footer');
 export const urlPath = '/Projects/Kekes_Model_Website/';
 export const date = new Date();
@@ -110,7 +110,7 @@ footer[0].innerHTML = `
     <br>
     <hr>
     <br>
-    <p>&copy; copyright 2022 Nazir Knuckles Inc | ${date.getFullYear()} | <span id="Company-Name"></span></p>
+    <p class="copyright">&copy; copyright 2022 Nazir Knuckles Inc | ${date.getFullYear()} | <span id="Company-Name"></span></p>
     </div>`
     
     export let companyName = document.querySelectorAll('#Company-Name');
@@ -157,29 +157,30 @@ footerForm.addEventListener('submit', (e) => {
 })
 
 // Dynamic Indexes
-export const i = {
+export const i2 = {
     compInfo: 0,
     navLin: 1,
     icons: 2,
     attrb: 3,
     nav: 4,
-    footer: 4,
+    footer: 5,
     date: 10,
+    path: 12
 }
 
 export const navStoreBlueprint = new Array(15);
-navStoreBlueprint[i.compInfo] = companyInfo;
-navStoreBlueprint[i.navLin] = navLinks;
-navStoreBlueprint[i.icons] = icons;
-navStoreBlueprint[i.attrb] = attribute;
-navStoreBlueprint[i.nav] = navbar;
-navStoreBlueprint[i.footer] = footer;
+navStoreBlueprint[i2.compInfo] = companyInfo;
+navStoreBlueprint[i2.navLin] = navLinks;
+navStoreBlueprint[i2.icons] = icons;
+navStoreBlueprint[i2.attrb] = attribute;
+navStoreBlueprint[i2.nav] = navbar;
+navStoreBlueprint[i2.footer] = footer;
 navStoreBlueprint[6] = footerForm;
 navStoreBlueprint[7] = footerInput;
 navStoreBlueprint[8] = footerLabel;
 navStoreBlueprint[9] = footerResponse;
 navStoreBlueprint[10] = footerBtn;
-navStoreBlueprint[i.date] = date;
-navStoreBlueprint[12] = urlPath;
+navStoreBlueprint[i2.date] = date;
+navStoreBlueprint[i2.path] = urlPath;
 
 setCompanyName("Palmer Studios");
