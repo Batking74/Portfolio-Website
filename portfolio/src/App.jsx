@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 const docTitle = document.getElementsByTagName('title')[0];
-
 const length = 10;
 const name = new Array(length);
 name[0] = 'Digital Art Portfolio';
@@ -32,7 +31,7 @@ image[3] = [require('./IMG/Login.png')];
 image[4] = [require('./IMG/Landing Page.png')];
 image[5] = [require('./IMG/Calculator.png')];
 image[6] = [require('./IMG/Talking Computer.png')];
-image[7] = [require('./IMG/Palmer Studios.png')];
+image[7] = [require('./IMG/Palmer_Logo.png')];
 image[8] = [require('./IMG/Lion2.JPG')];
 image[9] = [require('./IMG/Lion2.JPG')];
 
@@ -87,7 +86,10 @@ export default class App extends React.Component {
   
   render() {
     docTitle.textContent = `Nazir's Portfolio`;
-    const aboutAlt = "Me (Naz) 17 years old (Senior Year)";
+    const alt = new Array(2);
+    alt[0] = "Me 14 years old (Freshmen Year)";
+    alt[1] = "Me 17 years old (Senior Year)";
+
     console.log(this.props.age)
     const item0 = new App(name[0], tag[0], image[2], link[0]);
     const item1 = new App(name[1], tag[1], image[3], link[1]);
@@ -175,9 +177,10 @@ export default class App extends React.Component {
       })
     }
 
-    function getImageCaption() {
-      const p = document.getElementById('img-caption');
-      p.textContent = aboutAlt;
+    function setCaption(i) {
+      const p = document.querySelectorAll('#img-caption');
+      if(i == 0) p[0].classList.add('transCap1');
+      else p[1].innerHTML = alt[1];
     }
 
     // Rendering HTML
@@ -211,7 +214,8 @@ export default class App extends React.Component {
           <button id="background-Toggle" className={className[3]}>Background</button>
           <button className="music-btn playMusic">Music</button>
         </div>
-        <img src={image[0]} className="image" alt="Nazir Knuckles at age 14 with high-top fade." />
+        <img src={image[0]} className="image" onClick={()=>setCaption(0)} alt={alt[0]} />
+        <p className='imgCap1' id="img-caption">{alt[0]}</p>
       </section>
 
 
@@ -224,8 +228,8 @@ export default class App extends React.Component {
         <div className={className[5]}></div>
         <div className="about-me-container">
           <div className="left-col">
-            <img onClick={getImageCaption} src={image[1]} className="about-image" alt={aboutAlt}/>
-            <p id='img-caption'></p>
+            <img onClick={()=>setCaption(1)} src={image[1]} className="about-image" alt={alt[1]}/>
+            <p className='imgCap2' id='img-caption'></p>
           </div>
           <div className="right-col">
             <p id="ReadTextAI" className="about-paragraph">Hello, I am Naz a k a Mr. Knuckles. I am not finnished my portfolio project, but when I do finnish I'll actually put something about me in this section. This portfolio project is actually almost done, unlike the "Keekee's Modeling Studio" project. All I have to do for this project is figure out how to program a few things, validate the form at the very bottom of this page, and make the users input send to my email (which is hard because for some reason my code wont run when I try to program user data to send to my email). Anyways, here is some Lorem Gibberish to keep you entertained. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ipsum autem quibusdam illo aliquid quia earum voluptates eum aliquam perspiciatis? Id tempora mollitia doloribus magnam vitae corporis USA Poddle, molestiae quae quam, praesentium exercitationem quidem at sapiente eius odit? Aliquam velit dolor aut totam exercitationem.</p>
@@ -261,7 +265,7 @@ export default class App extends React.Component {
           <div className={className[6]} style={{background: "--bg: black"}}>
             <p className={className[7]}>Terminal</p>
           </div>
-          <div className={className[6]} style={{background: "--bg: #ffa200"}}>
+          <div className={className[6]} style={{backgroundColor: "--bg: #ffa200"}}>
             <p className={className[7]}>Java</p>
           </div>
           <div className={className[6]} style={{background: "--bg: #d4ff00"}}>
