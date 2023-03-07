@@ -165,6 +165,17 @@ export default class App extends React.Component {
         speechSynthesis.speak(utterance);
       }
     }
+
+    function startCountDown() {
+      // Countdown
+      // Step 1. What element do we want to animate?
+      const countdown = document.querySelector("#countdown");
+      // Step 2. What function will change it each time?
+      const currentTime = parseFloat(countdown.textContent);
+      if (currentTime > 0) {
+        countdown.textContent = currentTime - 1;
+      }
+    }
     
     // Filter Projects
     function filterProjects() {
@@ -210,7 +221,7 @@ export default class App extends React.Component {
         <div className="hero-content">
           <h1 className="hero-heading"><span id={className[2]} className={className[9]}>Hi, </span>I am Nazir</h1>
           <p className="profession">Web Developer</p>
-          <p className="info">Web Development is my passion. I love Thinking outside the box to solve complex problems. <strong id="Countdown-Text">You have <span id="countdown">500</span> seconds left!</strong></p>
+          <p className="info">Web Development is my passion. I love Thinking outside the box to solve complex problems. <strong id="Countdown-Text">You have <span onLoadedData={startCountDown} id="countdown">3</span> seconds left!</strong></p>
           <button id="background-Toggle" className={className[3]}>Background</button>
           <button className="music-btn playMusic">Music</button>
         </div>
