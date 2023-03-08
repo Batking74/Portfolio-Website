@@ -1,4 +1,4 @@
-import { navStoreBlueprint, i2 } from "./Nav&Footer_Blueprint.mjs";
+import { navStoreBlueprint, i2 } from "../Nav&Footer_Blueprint.mjs";
 import Product, { bluePrint, setProducts, setStoreName, setDocName, setNumProducts, getNavigator, validateNav, i } from "./Store_Blueprint.mjs";
 
 // Product Attributes
