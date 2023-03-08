@@ -1,5 +1,5 @@
 import {setProducts, setStoreName, setDocName, setNumProducts, getNavigator, validateNav, main, body, header, ad, productCount, productMainContainer, storeNavigation, sideNavigation, openMenu, pageName, storeTitle, pageLink, price, productLink, description, img, myProductArray, rating } from "../Store/Store_Blueprint.mjs";
-import { navStoreBlueprint, i2 } from "../Nav&Footer_Blueprint.mjs";
+import { companyInfo, navLinks, icons, attribute, navbar, footer, footerForm, footerInput, footerLabel, footerResponse, footerBtn, date, urlPath, linkCSS } from "../Nav&Footer_Blueprint.mjs";
 
 // Product Attributes
 price[0] = 13.99;

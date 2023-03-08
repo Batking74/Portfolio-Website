@@ -8,7 +8,7 @@ export default class LinkedList {
     getIndex(index) {
         let originalNode = this.head;
         if(index < 0 || index >= this.length) return null;
-        for(let i = 0; i < index; i++) originalNode += nextNode;
+        for(let i = 0; i < index; i++) originalNode = originalNode.nextNode;
         return originalNode;
     }
 

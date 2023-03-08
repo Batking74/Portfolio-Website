@@ -150,8 +150,8 @@ footer[0].innerHTML = `
         const styleLink2 = document.createElement('link');
         styleLink1.setAttribute('rel', 'stylesheet');
         styleLink2.setAttribute('rel', 'stylesheet');
-        styleLink1.setAttribute('href', `${navStoreBlueprint[12]}${cssFile}`);
-        styleLink2.setAttribute('href', `${navStoreBlueprint[12]}/CSS/Nav&Footer.css`);
+        styleLink1.setAttribute('href', `${urlPath}${cssFile}`);
+        styleLink2.setAttribute('href', `${urlPath}/CSS/Nav&Footer.css`);
         head[0].append(styleLink1, styleLink2);
     }
 
@@ -161,30 +161,15 @@ footerForm.addEventListener('submit', (e) => {
 })
 
 // Dynamic Indexes
-export const i2 = {
-    compInfo: 0,
-    navLin: 1,
-    icons: 2,
-    attrb: 3,
-    nav: 4,
-    footer: 5,
-    date: 10,
-    path: 12
-}
-
-export const navStoreBlueprint = new Array(15);
-navStoreBlueprint[i2.compInfo] = companyInfo;
-navStoreBlueprint[i2.navLin] = navLinks;
-navStoreBlueprint[i2.icons] = icons;
-navStoreBlueprint[i2.attrb] = attribute;
-navStoreBlueprint[i2.nav] = navbar;
-navStoreBlueprint[i2.footer] = footer;
-navStoreBlueprint[6] = footerForm;
-navStoreBlueprint[7] = footerInput;
-navStoreBlueprint[8] = footerLabel;
-navStoreBlueprint[9] = footerResponse;
-navStoreBlueprint[10] = footerBtn;
-navStoreBlueprint[i2.date] = date;
-navStoreBlueprint[i2.path] = urlPath;
+// export const i2 = {
+//     compInfo: 0,
+//     navLin: 1,
+//     icons: 2,
+//     attrb: 3,
+//     nav: 4,
+//     footer: 5,
+//     date: 10,
+//     path: 12
+// }
 
 setCompanyName("Palmer Studios");

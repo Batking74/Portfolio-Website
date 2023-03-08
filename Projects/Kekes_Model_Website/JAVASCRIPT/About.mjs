@@ -1,4 +1,4 @@
-import { navStoreBlueprint, linkCSS } from "./Nav&Footer_Blueprint.mjs";
+import { companyInfo, navLinks, icons, attribute, navbar, footer, footerForm, footerInput, footerLabel, footerResponse, footerBtn, date, urlPath, linkCSS } from "./Nav&Footer_Blueprint.mjs";
 linkCSS('CSS/About.css');
 
 function fetchYouTubeData() {

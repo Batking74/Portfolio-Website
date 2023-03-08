@@ -1,4 +1,4 @@
-import { navStoreBlueprint, linkCSS, i2 } from "./Nav&Footer_Blueprint.mjs";
+import { companyInfo, navLinks, icons, attribute, navbar, footer, footerForm, footerInput, footerLabel, footerResponse, footerBtn, date, urlPath, linkCSS } from "./Nav&Footer_Blueprint.mjs";
 linkCSS('CSS/Login.css');
 
 const submitBtn = document.getElementById('submit-btn');
@@ -49,5 +49,5 @@ function getError(index, select) {
     }
 }
 
-navStoreBlueprint[i2.footer][0].remove();
+footer[0].remove();
 console.log(navStoreBlueprint)

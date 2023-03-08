@@ -1,4 +1,4 @@
-import { navStoreBlueprint, linkCSS, i2 } from "./Nav&Footer_Blueprint.mjs";
+import { companyInfo, navLinks, icons, attribute, navbar, footer, footerForm, footerInput, footerLabel, footerResponse, footerBtn, date, urlPath, linkCSS } from "./Nav&Footer_Blueprint.mjs";
 linkCSS('CSS/Contact.css');
 
 // Targeting Elements
@@ -18,29 +18,29 @@ formContactInfo.innerHTML = `
 <h1>Contact<br>Information</h1>
 <p>Fill out the form then click<br>send</p>
 <div class="info-group-1">
-    <img width="27" height="27" src="${navStoreBlueprint[i2.icons][7]}" alt="Phone Icon">
-    <p>${navStoreBlueprint[i2.compInfo][0]}</p>
+    <img width="27" height="27" src="${icons[7]}" alt="Phone Icon">
+    <p>${companyInfo[0]}</p>
 </div>
 <div class="info-group-2">
-    <img width="22" height="22" src="${navStoreBlueprint[i2.icons][8]}" alt="Mail Icon">
-    <p>${navStoreBlueprint[i2.compInfo][1]}</p>
+    <img width="22" height="22" src="${icons[8]}" alt="Mail Icon">
+    <p>${companyInfo[1]}</p>
 </div>
 <div class="info-group-3">
-    <img width="28" height="28" src="${navStoreBlueprint[i2.icons][9]}" alt="Location Icon">
-    <p>${navStoreBlueprint[i2.compInfo][2]}</p>
+    <img width="28" height="28" src="${icons[9]}" alt="Location Icon">
+    <p>${companyInfo[2]}</p>
 </div>
 <div class="info-group-4">
-    <a href="${navStoreBlueprint[i2.navLin][6]}">
-        <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][12]}" alt="FaceBook Logo">
+    <a href="${navLinks[6]}">
+        <img class="${attribute[3]}" src="${icons[12]}" alt="FaceBook Logo">
     </a>
-    <a href="${navStoreBlueprint[i2.navLin][7]}">
-        <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][13]}" alt="Instagram Icon">
+    <a href="${navLinks[7]}">
+        <img class="${attribute[3]}" src="${icons[13]}" alt="Instagram Icon">
     </a>
-    <a href="${navStoreBlueprint[i2.navLin][8]}">
-        <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][14]}" alt="Twitter Icon">
+    <a href="${navLinks[8]}">
+        <img class="${attribute[3]}" src="${icons[14]}" alt="Twitter Icon">
     </a>
-    <a href="${navStoreBlueprint[i2.navLin][9]}">
-        <img class="${navStoreBlueprint[i2.attrb][3]}" src="${navStoreBlueprint[i2.icons][15]}" alt="YouTube Icon">
+    <a href="${navLinks[9]}">
+        <img class="${attribute[3]}" src="${icons[15]}" alt="YouTube Icon">
     </a>
 </div>
 `
@@ -83,5 +83,4 @@ form.addEventListener('submit', (e) => {
     validate();
 })
 
-console.log(navStoreBlueprint);
-navStoreBlueprint[i2.footer][0].remove();
+footer[0].remove();
