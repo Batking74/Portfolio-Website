@@ -55,7 +55,6 @@ export let description = [];
 export let img = [];
 export const myProductArray = [];
 export const rating = new Array(5);
-export let isDiscounted = [];
 
 rating[0] = '&#8902';
 rating[1] = '&#8902 &#8902';
@@ -105,27 +104,26 @@ export default class Product {
 // Creating Store
 export function setProducts(array) {
     let temp = [];
-    bluePrint[i.productArr].push(temp);
-    for(let index = 0; index < array.length; index++) {
-        const objects = new Product(bluePrint[i.img][index], bluePrint[i.des][index], bluePrint[i.price][index], bluePrint[i.rate][4], bluePrint[i.link][index]);
+    myProductArray.push(temp);
+    for(let i = 0; i < array.length; i++) {
+        const objects = new Product(img[i], description[i], price[i], rating[4], productLink[i]);
         const percent = new Array(0);
-        let discounted = new Array(0);
         temp.push(objects);
 
         // Displaying Each Products Attributes
-        bluePrint[i.productMain].innerHTML += `
+        productMainContainer.innerHTML += `
             <div class="Product-Container">
-                <a href="${bluePrint[i.link][index]}">
-                <img src="${bluePrint[i.img][index]}" alt="${bluePrint[i.des][index]}">
+                <a href="${productLink[i]}">
+                <img src="${img[i]}" alt="${description[i]}">
                 <div class="Product-Card">
                     <span class="Price-Container">
                         <p class="Product-Price">$${getDiscount()}</p>
-                        <p class="Product-Old-Price">$${bluePrint[i.price][index]}</p>
+                        <p class="Product-Old-Price">$${price[i]}</p>
                     </span>
-                    <p class="Product-description">${bluePrint[i.des][index]}</p>
+                    <p class="Product-description">${description[i]}</p>
                     <br>
                     <p class="Percent-Off">${percent[0]}</p>
-                    <p class="Product-Rating">${bluePrint[i.rate][4]}</p>
+                    <p class="Product-Rating">${rating[4]}</p>
                     <span>
                         <a class="AddToList" href="">Add to List</a>
                     </span>
@@ -136,32 +134,27 @@ export function setProducts(array) {
         // Non Discounted Products Condition
         const oldPrice = document.querySelectorAll(".Product-Old-Price");
         const prcnt = document.querySelectorAll('.Percent-Off');
-        if(getDiscount() === bluePrint[i.price][index]) {
-            oldPrice[index].innerHTML = "";
-            prcnt[index].innerHTML = "";
+        if(getDiscount() === price[i]) {
+            oldPrice[i].innerHTML = "";
+            prcnt[i].innerHTML = "";
         }
-
-        bluePrint[i.isDiscounted].push(discounted);
         
         // Getting Discounts
         function getDiscount() {
-            if(bluePrint[i.price][index] <= 20 && bluePrint[i.price][index] > 10) {
+            if(price[i] <= 20 && price[i] > 10) {
                 let discount = 30 / 100;
-                let total = bluePrint[i.price][index] - (bluePrint[i.price][index] * discount);
+                let total = price[i] - (price[i] * discount);
                 percent.push("30% OFF!");
-                discounted = true;
                 return parseFloat(total).toFixed(2);
             }
-            else if(bluePrint[i.price][index] >= 100) {
+            else if(price[i] >= 100) {
                 let discount = 50 / 100;
-                let total = bluePrint[i.price][index] - (bluePrint[i.price][index] * discount);
+                let total = price[i] - (price[i] * discount);
                 percent.push("50% OFF!");
-                discounted = true;
                 return parseFloat(total).toFixed(2);
             }
             else {
-                discounted = false;
-                return bluePrint[i.price][index];
+                return price[i];
             }
         }
     }
@@ -191,23 +184,23 @@ export function validateNav(index) {
     const backButton = document.querySelector('#Previous-Page');
     if(index === 0) {
         nextPage.addEventListener('click', () => {
-            location.replace(`${bluePrint[i.pageL][1]}`);
+            location.replace(`${pageLink[1]}`);
         })
     }
 
     if(index === 1) {
         nextPage.addEventListener('click', () => {
-            location.replace(`${bluePrint[i.pageL][2]}`);
+            location.replace(`${pageLink[2]}`);
         })
     
         backButton.addEventListener('click', () => {
-            location.replace(`${bluePrint[i.pageL][0]}`);
+            location.replace(`${pageLink[0]}`);
         })
     }
 
     if(index === 2) {
         backButton.addEventListener('click', () => {
-            location.replace(`${bluePrint[i.pageL][1]}`);
+            location.replace(`${pageLink[1]}`);
         })
     }
 }
@@ -237,51 +230,3 @@ export function getNavigator(index) {
 openMenu.addEventListener('click', () => {
     navStoreBlueprint[i2.nav].classList.toggle('active');
 });
-
-// Dynamic Indexes
-export const i = {
-    mainTag: 0,
-    body: 1,
-    header: 2,
-    ad: 3,
-    productCount: 4,
-    productMain: 5,
-    storeNav: 6,
-    sideNav: 7,
-    openMenu: 8,
-    pageName: 9,
-    storeTitl: 10,
-    pageL: 11,
-    price: 12,
-    link: 13,
-    des: 14,
-    productArr: 15,
-    img: 16,
-    rate: 17,
-    isDiscounted: 18,
-    store1: 19,
-    store2: 20,
-    store3: 21,
-}
-
-// BluePrint Array
-export const bluePrint = new Array(23);
-bluePrint[i.mainTag] = main;
-bluePrint[i.body] = body;
-bluePrint[i.header] = header;
-bluePrint[i.ad] = ad;
-bluePrint[i.productCount] = productCount;
-bluePrint[i.productMain] = productMainContainer;
-bluePrint[i.storeNav] = storeNavigation;
-bluePrint[i.sideNav] = sideNavigation;
-bluePrint[i.openMenu] = openMenu;
-bluePrint[i.pageName] = pageName;
-bluePrint[i.storeTitl] = storeTitle;
-bluePrint[i.pageL] = pageLink;
-bluePrint[i.price] = price;
-bluePrint[i.link] = productLink;
-bluePrint[i.des] = description;
-bluePrint[i.productArr] = myProductArray;
-bluePrint[i.img] = img;
-bluePrint[i.rate] = rating;
-bluePrint[i.isDiscounted] = isDiscounted;
