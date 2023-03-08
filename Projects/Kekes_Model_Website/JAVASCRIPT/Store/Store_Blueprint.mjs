@@ -1,4 +1,5 @@
 import { navStoreBlueprint, linkCSS, i2 } from "./Nav&Footer_Blueprint.mjs";
+import LinkedList from "../LinkedList.mjs";
 linkCSS('CSS/Store.css');
 
 // Dynamic HTML Page
