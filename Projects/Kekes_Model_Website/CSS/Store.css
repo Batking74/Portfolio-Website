@@ -88,10 +88,11 @@ header h1 {
     border-radius: 10px;
     border: #221e1e solid 5px;
     width: 80%;
-    transition: 1.3s;
+    transition: 1s;
 }
 
 .Product-Container img:hover {
+    transition: 1.3s;
     transform: scale(1.2);
 }
 
@@ -193,11 +194,6 @@ header h1 {
     right: 172px;
     font-size: x-large;
     font-family:Arial, Helvetica, sans-serif;
-}
-
-.Remove-Discount {
-    display: none;
-    background-color: green;
 }
 
 .Percent-Off {

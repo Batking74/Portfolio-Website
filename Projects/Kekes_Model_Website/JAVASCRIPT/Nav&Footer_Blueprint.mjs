@@ -160,16 +160,4 @@ footerForm.addEventListener('submit', (e) => {
     validate();
 })
 
-// Dynamic Indexes
-// export const i2 = {
-//     compInfo: 0,
-//     navLin: 1,
-//     icons: 2,
-//     attrb: 3,
-//     nav: 4,
-//     footer: 5,
-//     date: 10,
-//     path: 12
-// }
-
 setCompanyName("Palmer Studios");

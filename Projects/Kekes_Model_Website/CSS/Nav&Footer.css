@@ -168,12 +168,12 @@ select:-webkit-autofill:focus {
         width: 30%;
         z-index: 4;
         border-right: 3px solid #ffa60088;
-        background-color: #000000e9;
-        left: -50%;
+        background: #000000e9;
+        left: -100%;
         transition: 1.3s;
     }
 
-    #navbar.active { left: 0; }
+    #navbar.active { left: 0;}
 
     #menu-open {
         position: fixed;
@@ -183,7 +183,7 @@ select:-webkit-autofill:focus {
         height: 25px;
         cursor: pointer;
         z-index: 5;
-        transition: 1s;
+        transition: 0.3s;
     }
 
     #menu-open span {

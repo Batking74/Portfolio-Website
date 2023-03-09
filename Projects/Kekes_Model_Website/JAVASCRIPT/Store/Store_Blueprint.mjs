@@ -74,13 +74,14 @@ setDocName("Palmer Studios Store");
 
 // Creating Dynamic Project Card/Classes
 export default class Product {
-    constructor(image, description, price, rating, link) {
+    constructor(image, description, price, rating, link, id) {
         this.image = image;
         this.imageAlt = description;
         this.description = description;
         this.price = price;
         this.rating = rating;
         this.link = link;
+        this.id = id;
     }
 
     getImage() {
@@ -94,33 +95,44 @@ export default class Product {
     getDescription() {
         return this.description;
     }
+
     getPrice() {
         return this.price;
     }
+
     getLink() {
         return this.link;
+    }
+
+    getId() {
+        return this.id;
     }
 }
 
 // Creating Store
 export function setProducts(array) {
-
     for(let i = 0; i < array.length; i++) {
-        let objects = new Product(img.getIndex(i), description.getIndex(i), price.getIndex(i), rating[4], productLink.getIndex(i));
-        myProductArray.insertAtHead(objects);
+        const images = img.getIndex(i).value;
+        const prices = price.getIndex(i).value;
+        const alt = description.getIndex(i).value;
+        const link = productLink.getIndex(i).value;
+        // const idNum = Math.round((Math.random() * 88888888) + 10000000);
+
+        const object = new Product(images, alt, prices, rating[4], link);
+        myProductArray.insertAtHead(object);
         const percent = new Array(0);
 
         // Displaying Each Products Attributes
         productMainContainer.innerHTML += `
             <div class="Product-Container">
-                <a href="${productLink.getIndex(i).value}">
-                <img src="${img.getIndex(i).value}" alt="${description.getIndex(i).value}">
+                <a href="${link}">
+                <img src="${images}" alt="${alt}">
                 <div class="Product-Card">
                     <span class="Price-Container">
                         <p class="Product-Price">$${getDiscount()}</p>
-                        <p class="Product-Old-Price">$${price.getIndex(i).value}</p>
+                        <p class="Product-Old-Price">$${prices}</p>
                     </span>
-                    <p class="Product-description">${description.getIndex(i).value}</p>
+                    <p class="Product-description">${alt}</p>
                     <br>
                     <p class="Percent-Off">${percent[0]}</p>
                     <p class="Product-Rating">${rating[4]}</p>
@@ -134,7 +146,7 @@ export function setProducts(array) {
         // Non Discounted Products Condition
         const oldPrice = document.querySelectorAll(".Product-Old-Price");
         const prcnt = document.querySelectorAll('.Percent-Off');
-        if(getDiscount() === price.getIndex(i).value) {
+        if(getDiscount() === prices) {
             oldPrice[i].innerHTML = "";
             prcnt[i].innerHTML = "";
         }
@@ -159,6 +171,7 @@ export function setProducts(array) {
         }
     }
 }
+
 
 
 // Creating Functions
