@@ -1,4 +1,4 @@
-import {setProducts, setStoreName, setDocName, setNumProducts, getNavigator, validateNav, main, body, header, ad, productCount, productMainContainer, storeNavigation, sideNavigation, openMenu, pageName, storeTitle, pageLink, price, productLink, description, img, myProductArray, rating } from "../Store/Store_Blueprint.mjs";
+import {setProducts, setStoreName, setDocName, setNumProducts, getNavigator, validateNav, generateId, main, body, header, ad, productCount, productMainContainer, storeNavigation, sideNavigation, openMenu, pageName, storeTitle, pageLink, price, productLink, description, img, myProductArray, rating } from "../Store/Store_Blueprint.mjs";
 import { companyInfo, navLinks, icons, attribute, navbar, footer, footerForm, footerInput, footerLabel, footerResponse, footerBtn, date, urlPath, linkCSS } from "../Nav&Footer_Blueprint.mjs";
 
 // Product Attributes
@@ -121,6 +121,8 @@ body[0].classList.add("changeBody");
 productMainContainer.classList.add('positionMain');
 storeNavigation.innerHTML = getNavigator(1);
 validateNav(1);
-setProducts(img);
+setProducts(img, 3846);
 setNumProducts(myProductArray.length);
 setDocName("Palmer Studios Store | Page 2");
+
+console.log(myProductArray);

@@ -83,42 +83,51 @@ export default class Product {
         this.link = link;
         this.id = id;
     }
-
+    
     getImage() {
         return this.image;
     }
-
+    
     getAlt() {
         return this.imageAlt;
     }
-
+    
     getDescription() {
         return this.description;
     }
-
+    
     getPrice() {
         return this.price;
     }
-
+    
     getLink() {
         return this.link;
     }
-
+    
     getId() {
         return this.id;
     }
 }
 
+export function* generateId(i) {
+    let id = 4381971 + (i * 27385);
+
+    while(true) {
+        yield id;
+    }
+}
+
+
 // Creating Store
-export function setProducts(array) {
+export function setProducts(array, num) {
     for(let i = 0; i < array.length; i++) {
         const images = img.getIndex(i).value;
         const prices = price.getIndex(i).value;
         const alt = description.getIndex(i).value;
         const link = productLink.getIndex(i).value;
-        // const idNum = Math.round((Math.random() * 88888888) + 10000000);
-
-        const object = new Product(images, alt, prices, rating[4], link);
+        let id = generateId(i).next().value + num;
+        
+        const object = new Product(images, alt, prices, rating[4], link, id);
         myProductArray.insertAtHead(object);
         const percent = new Array(0);
 
@@ -165,13 +174,19 @@ export function setProducts(array) {
                 percent.push("50% OFF!");
                 return parseFloat(total).toFixed(2);
             }
+            else if(id == 5097827) {
+                let discount = 20 / 100;
+                let total = price.getIndex(i).value - (price.getIndex(i).value * discount);
+                percent.push("20% OFF!");
+                return parseFloat(total).toFixed(2);
+            }
             else {
                 return price.getIndex(i).value;
             }
         }
+
     }
 }
-
 
 
 // Creating Functions

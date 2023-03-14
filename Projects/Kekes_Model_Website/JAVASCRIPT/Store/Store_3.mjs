@@ -113,6 +113,6 @@ productMainContainer.classList.add('positionMain');
 storeNavigation.innerHTML = getNavigator(2);
 
 validateNav(2);
-setProducts(img);
+setProducts(img, 2842);
 setNumProducts(myProductArray.length);
 setDocName("Palmer Studios Store | Page 3");
