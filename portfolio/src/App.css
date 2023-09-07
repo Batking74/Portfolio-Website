@@ -469,9 +469,15 @@ body {
 }
 
 /* Footer */
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   width: 100%;
-  height: 30px;
+  height: 100%;
   text-align: center;
   background-color: #ff3559;
   text-transform: capitalize;
@@ -520,10 +526,11 @@ body {
   .hero-heading { font-size: 3rem; }
   .home-image { margin-top: 50px; }
   .about-image { width: 300pxpx; height: 450px; }
+  .about-paragraph { margin-top: 30px; }
   .skill { font-size: 1.3rem; }
   .left-col::before { display: none; }
   .left-col::after { display: none; }
-  
+
   /* Toggle btn */
   .toggle-btn {
     position: absolute;
@@ -622,24 +629,25 @@ body {
   
   .skill-container, .project-container {
     grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .skill-card {
-      /* important value overwrites everything in the class with the new styles aka grid-column. */
-      grid-column: 1 span !important;
-    }
   }
   
-  @media (max-width: 824px) {
-    .hero-heading {font-size: 3rem; }
+  .skill-card {
+    /* important value overwrites everything in the class with the new styles aka grid-column. */
+    grid-column: 1 span !important;
   }
-  
-  /* mobile view */
-  @media screen and (max-width: 660px) {
-    .hero-heading { font-size: 2.8rem; }
-    .home-image { width: 300px; height: 300px; }
-    .about-image { width: 350px; height: 400px; }
-    .skill { font-size: 1.3rem; }
+}
+
+@media (max-width: 824px) {
+  .hero-heading {font-size: 3rem; }
+}
+
+/* mobile view */
+@media screen and (max-width: 660px) {
+  .hero-heading { font-size: 2.8rem; }
+  .home-image { width: 300px; height: 300px; }
+  .about-image { width: 350px; height: 400px; }
+  .about-paragraph { margin-top: 30px; }
+  .skill { font-size: 1.3rem; }
 
     p, .sub-heading, .about-paragraph, .left-col::before, .tags {
       font-size: 1.2rem;
@@ -663,52 +671,23 @@ body {
   p, .sub-heading, .about-paragraph, .left-col::before, .tags {
     font-size: 1rem;
   }
+  .about-paragraph { margin-top: 10px; }
   .left-col {
     position: relative;
-    left: 15%;
+    left: 8%;
     width: 75%;
   }
 }
-
-
-
-
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App-logo { width: 60px; }
+.App-logo2 { width: 30px; }
+.App-logo::selection, .App-logo2::selection { display: none; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  .App-logo { animation: App-logo-spin infinite 20s linear; }
+  .App-logo2 { animation: App-logo-spin infinite 20s linear; }
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
