@@ -66,6 +66,8 @@ className[14] = 'Project-Link';
 className[15] = '_blank';
 className[16] = 'heading test';
 
+
+
 export default class App extends React.Component {
   constructor(name, tags, image, link) {
     super();
@@ -87,6 +89,7 @@ export default class App extends React.Component {
         { /* Navigation */ }
         <nav className="navbar">
           <h1 className="brand">Batking</h1>
+          <img src={logo} className="App-logo" alt="React logo" />
           <div onClick={tools.toggleNavBar} className="toggle-btn">
             <span></span>
             <span></span>
@@ -124,7 +127,7 @@ export default class App extends React.Component {
                 You have <span onLoad={tools.startCountDown} className="countdown">300</span> seconds left!
               </strong>
             </p>
-            <button id="background-Toggle" className={className[3]}>Background</button>
+            <button onClick={tools.toggleBackground} className={className[3]}>Background</button>
             <button className="music-btn playMusic">Music</button>
           </div>
           <div className="home-img-container">
@@ -236,7 +239,7 @@ export default class App extends React.Component {
         <p className={className[12]}>Lorem ipsum dolor sit amet consectetur.</p>
         <div className={className[5]}></div>
         <div className="filters">
-          <button className="filter-btn active" id="all">all</button>
+          <button onClick={tools.filterProjects} className="filter-btn active" id="all">all</button>
           <button onClick={tools.filterProjects} className={className[11]} id="JavaScript">JavaScript</button>
           <button onClick={tools.filterProjects} className={className[11]} id="Bootstrap">Bootstrap</button>
           <button onClick={tools.filterProjects} className={className[11]} id="Java">Java</button>
@@ -348,7 +351,10 @@ export default class App extends React.Component {
         </form>
       </section>
       <footer id="footerBackgroundColorToggle" className="footer">
-        <p>made with love by Nazir Knuckles</p>
+        <div className="footer-container">
+          <p>made with love by Nazir Knuckles </p>
+          <img src={logo} className="App-logo2" alt="React logo" />
+        </div>
       </footer>
     </span>
     ) // End of return statement

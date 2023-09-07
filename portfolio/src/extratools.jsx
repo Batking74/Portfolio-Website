@@ -64,11 +64,12 @@ export function playText(text) {
     speechSynthesis.speak(utterance);
 }
 
-export function startCountDown() {
+export const startCountDown = () => {
+    console.log('hi')
     // Countdown
     // Step 1. What element do we want to animate?
     // const countdown = document.querySelector(".countdown");
-    console.log('kayyyyyyy')
+    // console.log(e)
     // Step 2. What function will change it each time?
     // const currentTime = parseFloat(countdown.textContent);
     // if (currentTime > 0) {
@@ -77,14 +78,10 @@ export function startCountDown() {
 }
 
 // Filter Projects
-export function filterProjects() {
+export function filterProjects(e) {
     const filter = document.querySelectorAll('.filter-btn');
-    filter.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filter.forEach(ele => ele.classList.remove('active'));
-            btn.classList.add('active');
-        })
-    })
+    filter.forEach(ele => ele.classList.remove('active'));
+    e.target.classList.add('active');
 }
 
 export function instantiateProjects(name, tag, image, link, doc) {
@@ -104,16 +101,16 @@ export function setCaption(i) {
 }
 
 // // Toggles
-// const backgroundBtn = document.querySelector('#background-Toggle');
-// const navigation = document.querySelector('.navbar')
-// const footer = document.querySelector('#footerBackgroundColorToggle')
-// const uniqueText = document.querySelectorAll("#highlight-Toggle");
-// backgroundBtn.addEventListener('click', () => {
-//     document.body.classList.toggle('changeBackgroundColor');
-//     navigation.classList.toggle('changeNavColorByToggle');
-//     footer.classList.toggle('footerBackgroundColorToggle');
-//     uniqueText.classList.toggle('highlight-Toggle');
-// })
+export function toggleBackground() {
+    const navigation = document.querySelector('.navbar')
+    const footer = document.querySelector('#footerBackgroundColorToggle')
+    const uniqueText = document.querySelectorAll("#highlight-Toggle");
+    document.body.classList.toggle('changeBackgroundColor');
+    navigation.classList.toggle('changeNavColorByToggle');
+    footer.classList.toggle('footerBackgroundColorToggle');
+    uniqueText.classList.toggle('highlight-Toggle');
+}
+
 
 // Play Music
 // const playMusic = document.querySelector('.playMusic');
