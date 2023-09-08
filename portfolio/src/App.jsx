@@ -7,12 +7,12 @@ const docTitle = document.getElementsByTagName('title')[0];
 const length = 10;
 const name = new Array(length);
 name[0] = 'Digital Art Portfolio';
-name[1] = 'Static Login';
-name[2] = 'Static Home Page';
+name[1] = 'Basic Login';
+name[2] = 'Basic Home Page';
 name[3] = 'Digital Calculator';
 name[4] = 'Talking Computer';
 name[5] = 'Palmer Studios';
-name[6] = 'Coming Soon!';
+name[6] = 'Budget Calculator';
 name[7] = 'Coming Soon!';
 
 const tag = new Array(length);
@@ -21,20 +21,20 @@ tag[1] = '#HTML #CSS';
 tag[2] = '#HTML #CSS';
 tag[3] = '#HTML #CSS #Javascript';
 tag[4] = '#HTML #CSS #Javascript';
-tag[5] = '#Javascript #ES6 Modules #Node.js';
-tag[6] = '#Bootstrap #React';
+tag[5] = '#HTML #CSS #Javascript #Node.js #SQL';
+tag[6] = '#HTML #CSS #Javascript #Node.js #SQL';
 tag[7] = '#Java';
 
 const image = new Array(length);
 image[0] = [require('./IMG/Freshmen_Naz.png')];
 image[1] = [require('./IMG/Nazir_Senior_Year.png')];
-image[2] = [require('./IMG/Art Portfolio.png')];
-image[3] = [require('./IMG/Login.png')];
-image[4] = [require('./IMG/Landing Page.png')];
-image[5] = [require('./IMG/Calculator.png')];
-image[6] = [require('./IMG/Talking Computer.png')];
-image[7] = [require('./IMG/Palmer_Logo.png')];
-image[8] = [require('./IMG/Lion2.JPG')];
+image[2] = [require('./IMG/Art_Portfolio_Project.png')];
+image[3] = [require('./IMG/Basic_Login_Project.png')];
+image[4] = [require('./IMG/Landing_Page_Project.png')];
+image[5] = [require('./IMG/Calculator_Project.png')];
+image[6] = [require('./IMG/Talking_Computer_Project.png')];
+image[7] = [require('./IMG/Palmer_Studios_Logo.png')];
+image[8] = [require('./IMG/Budget_Calculator_Project.png')];
 image[9] = [require('./IMG/Lion2.JPG')];
 
 const link = new Array(length);
@@ -44,7 +44,7 @@ link[2] = 'http://127.0.0.1:5555/Projects/Static_Landing_Page_2/HTML/index.html'
 link[3] = 'http://127.0.0.1:5555/Projects/Digital_Calculator_Project/HTML/markUp.html';
 link[4] = 'http://127.0.0.1:5555/Projects/AI_Talking_Computer_Project/HTML/index.html';
 link[5] = "http://127.0.0.1:5555/Projects/Kekes_Model_Website/HTML/index.html";
-link[6] = '#';
+link[6] = 'https://nazirsbudgetcalculator.netlify.app/';
 link[7] = '#';
 
 const className =  new Array(30);
@@ -153,7 +153,7 @@ export default class App extends React.Component {
             </div>
             <div className="right-col">
               <p id="ReadTextAI" className="about-paragraph">Hello, I am Naz a k a Mr. Knuckles. I am not finnished my portfolio project, but when I do finnish I'll actually put something about me in this section. This portfolio project is actually almost done, unlike the "Keekee's Modeling Studio" project. All I have to do for this project is figure out how to program a few things, validate the form at the very bottom of this page, and make the users input send to my email (which is hard because for some reason my code wont run when I try to program user data to send to my email). Anyways, here is some Lorem Gibberish to keep you entertained. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ipsum autem quibusdam illo aliquid quia earum voluptates eum aliquam perspiciatis? Id tempora mollitia doloribus magnam vitae corporis USA Poddle, molestiae quae quam, praesentium exercitationem quidem at sapiente eius odit? Aliquam velit dolor aut totam exercitationem.</p>
-              <button onClick={tools.speakAI} id="play-button" className={className[3]}>Read Aloud</button>
+              <button onClick={tools.readAboutSection} id="play-button" className={className[3]}>Read Aloud</button>
             </div>
           </div>
           

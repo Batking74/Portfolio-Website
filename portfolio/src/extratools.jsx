@@ -44,17 +44,15 @@ export function toggleLink(e) {
 }
 
 // Speechsynthesis
-export function speakAI() {
+export function readAboutSection() {
     const playButton = document.getElementById('play-button');
     const aboutText = document.getElementById('ReadTextAI');
-    playButton.addEventListener('click', (e) => {
-        playText(aboutText.textContent);
-        playButton.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
-        playButton.addEventListener('click', () => {
-            speechSynthesis.cancel();
-            playButton.innerHTML = `Read Aloud`;
-            playButton.reset();
-        })
+    playText(aboutText.textContent);
+    playButton.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
+    playButton.addEventListener('click', () => {
+        speechSynthesis.cancel();
+        playButton.innerHTML = `Read Aloud`;
+        playButton.reset();
     })
 }
 
