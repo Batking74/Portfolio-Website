@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nazir's Portfolio Website">
+    <title>Nazir's Portfolio</title>
+    <link rel="stylesheet" href="./CSS/home.css">
+</head>
+<body class="changeBackgroundColor">
+
+    <!-- Start of Navigation -->
+    <nav class="navbar">
+        <h1 class="brand">Batking</h1>
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="links-container">
+            <li class="links-item"><a href="#" class="link active">Home</a></li>
+            <li class="links-item"><a href="#about-section" class="link">About</a></li>
+            <li class="links-item"><a href="#project-section" class="link">Project</a></li>
+            <li class="links-item"><a href="#contact-section" class="link">Contact</a></li>
+        </ul>
+        <!-- <div id="validationError" class="validationError"></div> -->
+    </nav>
+    <main>
+        
+        <!-- Start of Home Section -->
+        <section class="home">
+            <div class="hero-content">
+                <h1 class="hero-heading"><span id="highlight-Toggle" class="highlight">Hi, </span>I am Nazir</h1>
+                <p class="profession">Web Developer</p>
+                <p class="info">Web Development is my passion. I love Thinking outside the box to solve complex problems. <strong id="Countdown-Text">You have <span id="countdown">300</span> seconds left!</strong></strong></p>
+                <button id="background-Toggle" class="btn">Background</button>
+                <!-- <button class="music-btn playMusic">Music</button> -->
+            </div>
+            <img src="./IMG/14_year_old_naz.png" class="image" alt="Nazir Knuckles at age 14 with high-top fade.">
+        </section>
+
+        <!-- Start of About Section -->
+        <section class="about" id="about-section">
+            <h2 class="heading">about <span id="highlight-Toggle" class="highlight">me</span></h2>
+            <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="seperator"></div>
+            <div class="about-me-container">
+                <div class="left-col">
+                    <img width="calc(100% - 900px)" height="400px" src="./IMG/Nazir_Senior_Year.JPG" class="about-image" alt="Salone mask">
+                </div>
+                <div class="right-col">
+                    <p id="ReadTextAI" class="about-paragraph">Hello, I am Naz a k a Mr. Knuckles. I am not finnished my portfolio project, but when I do finnish I'll actually put something about me in this section. This portfolio project is actually almost done, unlike the "Keekee's Modeling Studio" project. All I have to do for this project is figure out how to program a few things, validate the form at the very bottom of this page, and make the users input send to my email (which is hard because for some reason my code wont run when I try to program user data to send to my email). Anyways, here is some Lorem Gibberish to keep you entertained. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ipsum autem quibusdam illo aliquid quia earum voluptates eum aliquam perspiciatis? Id tempora mollitia doloribus magnam vitae corporis USA Poddle, molestiae quae quam, praesentium exercitationem quidem at sapiente eius odit? Aliquam velit dolor aut totam exercitationem.</p>
+                    <button id="play-button" class="btn">Read Aloud</button>
+                </div>
+            </div>
+            
+            <!-- Start of Skills Section -->
+            <h2 id="highlight-Toggle" class="heading">Languages, frameworks, and tools I know</h2>
+            <div class="seperator"></div>
+            <div class="skill-container">
+                <div class="skill-card" style="--bg: #ffa600ac;">
+                    <p class="skill">HTML</p>
+                </div>
+                <div class="skill-card" style="--bg: #0000ffb3;">
+                    <p class="skill">CSS</p>
+                </div>
+                <div class="skill-card" style="--bg: #ffff00b7;">
+                    <p class="skill">JavaScript</p>
+                </div>
+                <div class="skill-card" style="--bg: #0c35bd;">
+                    <p class="skill">React</p>
+                </div>
+                <div class="skill-card" style="--bg: #13e4d3;">
+                    <p class="skill">Node.js</p>
+                </div>
+                <div class="skill-card" style="--bg: #6200b890;">
+                    <p class="skill">Bootstrap</p>
+                </div>
+                <div class="skill-card" style="--bg: #ffa200;">
+                    <p class="skill">Java</p>
+                </div>
+                <div class="skill-card" style="--bg: #30c507;">
+                    <p class="skill">SQL</p>
+                </div>
+                <div class="skill-card" style="--bg: #a52a2a;">
+                    <p class="skill">Version Control</p>
+                </div>
+                <div class="skill-card" style="--bg: #12c0ff;">
+                    <p class="skill">Computer Repair</p>
+                </div>
+                <div class="skill-card" style="--bg: #5cd606b3;">
+                    <p class="skill">Phone Repair</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 id="highlight-Toggle" class="heading">What I want to Learn</h2>
+            <div class="seperator"></div>
+            <div class="skill-container">
+                <div class="skill-card" style="--bg: #01016a;">
+                    <p class="skill">Python</p>
+                </div>
+                <div class="skill-card" style="--bg: #3f37ce;">
+                    <p class="skill">Swift</p>
+                </div>
+                <div class="skill-card" style="--bg: #7c7b94;">
+                    <p class="skill">Other Tech</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start of Coding Projects Section -->
+        <section class="project" id="project-section">
+            <h2 class="heading">Project<span id="highlight-Toggle" class="highlight">s</span></h2>
+            <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="seperator"></div>
+            <div class="filters">
+                <button class="filter-btn active" id="all">all</button>
+                <button class="filter-btn" id="JavaScript">JavaScript</button>
+                <button class="filter-btn" id="Bootstrap">Bootstrap</button>
+                <button class="filter-btn" id="Java">Java</button>
+                <button class="filter-btn" id="React">React</button>
+                <button class="filter-btn" id="Python">Python</button>
+            </div>
+            <div class="project-container"></div>
+        </section>
+    
+        <!-- Contact form -->
+        <section class="contact" id="contact-section">
+            <form id="form" action="./HTML/thankYou.html">
+                <h2 class="heading">Contact<span id="highlight-Toggle" class="highlight"> me</span></h2>
+                <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="seperator"></div>
+                <div class="contact-form">
+                    <div class="name">
+                    <input type="text" id="first-name" class="first-name" placeholder="First name">
+                    <div id="validationError" class="validationError"></div>
+                    <input type="text" id="last-name" class="last-name" placeholder="Last name">
+                </div>
+                <input type="email" placeholder="Email" id="email" class="email">
+                <textarea maxlength="5000" id="message" class="message" placeholder="Message..." cols="30" rows="10"></textarea>
+                <button type="submit" id="contact-btn" class="btn">Contact</button>
+            </div>
+            </form>
+        </section>
+    </main>
+    <footer id="footerBackgroundColorToggle" class="footer">made with love by Nazir Knuckles</footer>
+    <script src="./JavaScript/home.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>

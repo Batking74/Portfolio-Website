@@ -145,8 +145,7 @@ body {
 }
 
 .image {
-    width: calc(100% - 800px);
-    height: 400px;
+    width: 400px;
 }
 
 .info {
@@ -260,7 +259,6 @@ body {
     height: 200px;
     border-radius: 10px;
     border: 1px solid #615b17;
-    /* #464646 */
     text-align: center;
     position: relative;
     cursor: pointer;
@@ -319,13 +317,15 @@ body {
     position: relative;
     cursor: pointer;
     display: block;
+    color: #fff;
 }
 
 .project-card img {
     width: 100%;
     height: 100%;
     /* Object-fit property makes the actual image fit nicely inside its borders. */
-    object-fit: cover;
+    /* object-fit: cover; */
+    object-fit: fill;
 }
 
 .project-card .content {
@@ -430,7 +430,7 @@ body {
     line-height: 30px;
 }
 
-/* Toggle Background Colors */
+/* Toggle Background Colors on click */
 .changeBackgroundColor {
     background: linear-gradient(90deg, #000000, #8f1616, #000000);
 }
