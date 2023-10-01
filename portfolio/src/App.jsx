@@ -38,10 +38,10 @@ image[8] = [require('./IMG/Budget_Calculator_Project.png')];
 image[9] = [require('./IMG/Lion2.JPG')];
 
 const link = new Array(length);
-link[0] = 'http://127.0.0.1:5555/Projects/Digital_Art_Portfolio_Project/HTML/index.html';
+link[0] = 'https://batking74.github.io/Digital_Art_Portfolio_Project--First-ever-project-/HTML/practice.html';
 link[1] = 'http://127.0.0.1:5555/Projects/Login_Page_Project/HTML/index.html';
 link[2] = 'http://127.0.0.1:5555/Projects/Static_Landing_Page_2/HTML/index.html';
-link[3] = 'http://127.0.0.1:5555/Projects/Digital_Calculator_Project/HTML/markUp.html';
+link[3] = 'https://batking74.github.io/Digital_Calculator_Project/';
 link[4] = 'http://127.0.0.1:5555/Projects/AI_Talking_Computer_Project/HTML/index.html';
 link[5] = "http://127.0.0.1:5555/Projects/Kekes_Model_Website/HTML/index.html";
 link[6] = 'https://nazirsbudgetcalculator.netlify.app/';
