@@ -12,6 +12,6 @@ Nazir's Portfolio Website showcasing projects
 - JavaScript
 - React
 
-Deployed Site: 
+Deployed Site: https://batking74.github.io/Portfolio-Website/
 
 GitHub Repo: https://github.com/Batking74/Portfolio-Website/tree/JS-Portfolio
