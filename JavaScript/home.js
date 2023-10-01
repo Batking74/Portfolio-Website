@@ -92,18 +92,18 @@ class myProjects {
     }
 }
 // Instantiation
-item1 = new myProjects('Project one', '#Javascript', '../IMG/Lion2.JPG', '');
+item1 = new myProjects('Project one', '#Javascript', './IMG/Lion2.JPG', '');
 
-item2 = new myProjects('Budget Calculator', '#HTML #CSS #JS #Node.js #SQL', '../IMG/Budget_Calculator_Project.png', 'https://batking74.github.io/Budget-Calculator/');
+item2 = new myProjects('Budget Calculator', '#HTML #CSS #JS #Node.js #SQL', './IMG/Budget_Calculator_Project.png', 'https://batking74.github.io/Budget-Calculator/');
 
-item3 = new myProjects('Talking Computer', '#HTML #CSS #JS', '../IMG/Talking_Computer_Project.png', 'https://batking74.github.io/Talking_Computer_Project/');
+item3 = new myProjects('Talking Computer', '#HTML #CSS #JS', './IMG/Talking_Computer_Project.png', 'https://batking74.github.io/Talking_Computer_Project/');
 
-item4 = new myProjects('Digital Art Portfolio', '#HTML #CSS', '../IMG/Art_Portfolio_Project.png', 'https://batking74.github.io/Digital_Art_Portfolio_Project--First-ever-project-/');
+item4 = new myProjects('Digital Art Portfolio', '#HTML #CSS', './IMG/Art_Portfolio_Project.png', 'https://batking74.github.io/Digital_Art_Portfolio_Project--First-ever-project-/');
 
-item5 = new myProjects('Password Generator', '#HTML #CSS #JS', '../IMG/Password Generator.png', 'https://batking74.github.io/Password-Generator/');
-item6 = new myProjects('Coming Soon', '', '../IMG/Lion2.JPG', '');
-item7 = new myProjects('Coming Soon', '', '../IMG/Lion2.JPG', '');
-item8 = new myProjects('Coming Soon', '', '../IMG/Lion2.JPG', '');
+item5 = new myProjects('Password Generator', '#HTML #CSS #JS', './IMG/Password Generator.png', 'https://batking74.github.io/Password-Generator/');
+item6 = new myProjects('Coming Soon', '', './IMG/Lion2.JPG', '');
+item7 = new myProjects('Coming Soon', '', './IMG/Lion2.JPG', '');
+item8 = new myProjects('Coming Soon', '', './IMG/Lion2.JPG', '');
 myProjectsArray = [item1, item2, item3, item4, item5, item6, item7, item8];
 myProjectsArray.forEach(project => {
     projectContainer.innerHTML += `
