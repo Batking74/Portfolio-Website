@@ -92,7 +92,7 @@ class myProjects {
     }
 }
 // Instantiation
-item1 = new myProjects('Project one', '#Javascript', './IMG/Lion2.JPG', '');
+item1 = new myProjects('Palmer Studios', '#Javascript', './IMG/Lion2.JPG', '');
 
 item2 = new myProjects('Budget Calculator', '#HTML #CSS #JS #Node.js #SQL', './IMG/Budget_Calculator_Project.png', 'https://batking74.github.io/Budget-Calculator/');
 
