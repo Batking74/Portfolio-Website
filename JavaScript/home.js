@@ -12,10 +12,10 @@
         location.replace('https://www.instagram.com/mr_blacknificent/')
     }
     
-};
+  };
 
 //   Step 3: Call that on an interval
-var timer = window.setInterval(countItDown, 1000);
+  var timer = window.setInterval(countItDown, 1000);
 
 // Toggle Navbar
 const toggleBtn = document.querySelector('.toggle-btn');
@@ -55,21 +55,26 @@ backgroundBtn.addEventListener('click', () => {
 // Speechsynthesis
 const playButton = document.getElementById('play-button');
 const aboutPElement = document.getElementById('ReadTextAI');
+let toggler = 0;
 playButton.addEventListener('click', () => {
-    playText(aboutPElement.textContent);
-    playButton.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
-    playButton.addEventListener('click', () => {
+    if(playButton.dataset.toggle === 'off') {
+        playButton.dataset.toggle = 'on';
+        playText(aboutPElement.textContent);
+        playButton.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
+    }
+    else {
+        playButton.dataset.toggle ='off';
         speechSynthesis.cancel();
         playButton.innerHTML = `Read Aloud`;
-        playButton.reset();
-    })
-})
+    }
+});
+
 
 const playText = (text) => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 1;
     speechSynthesis.speak(utterance);
-}
+    }
 
 // Filter Projects
 const filter = document.querySelectorAll('.filter-btn');
@@ -92,7 +97,7 @@ class myProjects {
     }
 }
 // Instantiation
-item1 = new myProjects('Palmer Studios', '#Javascript', './IMG/Lion2.JPG', '');
+item1 = new myProjects('Palmer Studios', '#Javascript', './IMG/Palmer_Studios_Project.png', 'https://batking74.github.io/Kekes_Model_Website/');
 
 item2 = new myProjects('Budget Calculator', '#HTML #CSS #JS #Node.js #SQL', './IMG/Budget_Calculator_Project.png', 'https://batking74.github.io/Budget-Calculator/');
 
