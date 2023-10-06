@@ -12,10 +12,10 @@
         location.replace('https://www.instagram.com/mr_blacknificent/')
     }
     
-  };
+};
 
 //   Step 3: Call that on an interval
-  var timer = window.setInterval(countItDown, 1000);
+var timer = window.setInterval(countItDown, 1000);
 
 // Toggle Navbar
 const toggleBtn = document.querySelector('.toggle-btn');
@@ -69,7 +69,7 @@ const playText = (text) => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 1;
     speechSynthesis.speak(utterance);
-    }
+}
 
 // Filter Projects
 const filter = document.querySelectorAll('.filter-btn');
@@ -92,7 +92,7 @@ class myProjects {
     }
 }
 // Instantiation
-item1 = new myProjects('Palmer Studios', '#Javascript', './IMG/Lion2.JPG', '');
+item1 = new myProjects('Palmer Studios', '#HTML #CSS #JS #Node.js #SQL', './IMG/Lion2.JPG', '');
 
 item2 = new myProjects('Budget Calculator', '#HTML #CSS #JS #Node.js #SQL', './IMG/Budget_Calculator_Project.png', 'https://batking74.github.io/Budget-Calculator/');
 

@@ -271,13 +271,13 @@ body {
     line-height: 200px;
 }
 
-.skill-card:hover {
+.skill-card:hover, .skill-card:active {
     background: var(--bg);
     transform: scale(1.1);
     transform: translateY(-15px);
 }
 
-.skill-card:hover .skill {
+.skill-card:hover .skill, .skill-card:active .skill {
     color: #ffffff;
 }
 
@@ -570,6 +570,7 @@ body {
         width: 90%;
         margin: auto;
         display: block;
+        height: 340px;
     }
 
     .skill-container, .project-container {
