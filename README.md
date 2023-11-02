@@ -1,7 +1,7 @@
 # Portfolio Website
 
 ### Description
-Nazir's Portfolio Website showcasing projects
+Nazir's Portfolio Website showcasing coding projects!
 
 ![Image of Nazir's Portfolio Website](IMG/Portfolio_Website.png)
 
