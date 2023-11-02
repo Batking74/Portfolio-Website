@@ -68,6 +68,7 @@ title.enqueue('Digital Art Portfolio');
 title.enqueue('Password Generator');
 title.enqueue('Meal Discovery');
 title.enqueue('Project-Tracker');
+title.enqueue('Work Day Scheduler');
 
 // Project Hashtags
 const hashTags = new Queue();
@@ -76,6 +77,7 @@ hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
 hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
+hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
 hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
 hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
 
@@ -88,6 +90,7 @@ image.enqueue('./IMG/Art_Portfolio_Project.png');
 image.enqueue('./IMG/Password Generator.png');
 image.enqueue('./IMG/Meal_Discovery_Project.png');
 image.enqueue('./IMG/Project-Tracker-Project.png');
+image.enqueue('./IMG/Work_day_calendar.png');
 
 // Project URL
 const url = new Queue();
@@ -98,7 +101,8 @@ url.enqueue('https://batking74.github.io/Digital_Art_Portfolio_Project--First-ev
 url.enqueue('https://batking74.github.io/Password-Generator/');
 url.enqueue('https://mrwait-music.github.io/super-group-project/');
 url.enqueue('https://batking74.github.io/Project-Tracker/');
-projectsComingSoon(1);
+url.enqueue('https://batking74.github.io/Work-Day-Calendar/');
+projectsComingSoon(0);
 
 const productList = new Queue();
 
