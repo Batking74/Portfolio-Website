@@ -111,7 +111,7 @@ url.enqueue('https://batking74.github.io/Password-Generator/');
 url.enqueue('https://mrwait-music.github.io/super-group-project/');
 url.enqueue('https://batking74.github.io/Project-Tracker/');
 url.enqueue('https://batking74.github.io/Work-Day-Calendar/');
-url.enqueue('https://batking74.github.io/Landing_Page_Project_1/');
+url.enqueue('https://batking74.github.io/Landing-Page-Project/');
 url.enqueue('https://batking74.github.io/Login_Page_Project/');
 url.enqueue('https://batking74.github.io/Horiseon-Project/');
 projectsComingSoon(0);
