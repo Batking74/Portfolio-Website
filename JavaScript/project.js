@@ -73,6 +73,7 @@ title.enqueue('Landing Page Project 1');
 title.enqueue('Login Page Project');
 title.enqueue('Horiseon Project');
 title.enqueue('Digital Calculator Project');
+title.enqueue('Weather Dashboard');
 
 // Project Hashtags
 const hashTags = new Queue();
@@ -87,6 +88,7 @@ hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
 hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css}`);
+hashTags.enqueue(`${html} ${css} ${js}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
 
 // Project Images
@@ -103,6 +105,7 @@ image.enqueue('./IMG/Landing_Page_Project_1.png');
 image.enqueue('./IMG/Login_Project.png');
 image.enqueue('./IMG/Horiseon_Project.png');
 image.enqueue('./IMG/Calculator_project.png');
+image.enqueue('./IMG/Weather-Dashboard.png');
 
 // Project URL
 const url = new Queue();
@@ -118,6 +121,7 @@ url.enqueue('https://batking74.github.io/Landing-Page-Project/');
 url.enqueue('https://batking74.github.io/Login_Page_Project/');
 url.enqueue('https://batking74.github.io/Horiseon-Project/');
 url.enqueue('https://batking74.github.io/Digital_Calculator_Project/');
+url.enqueue('https://batking74.github.io/Weather-Dashboard/');
 projectsComingSoon(0);
 
 const productList = new Queue();
