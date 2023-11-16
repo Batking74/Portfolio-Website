@@ -173,7 +173,7 @@ filter.forEach(btn => {
 function displayProjects(project) {
     projectContainer.innerHTML += `
         <a href="${project.link}" class="project-card" data-tags="#all, ${project.tags}">
-            <img src="${project.image}" alt="">
+            <img loading="lazy" src="${project.image}" alt="${project.name}">
             <div class="content">
                 <h1 class="project-name">${project.name}</h1>
                 <span class="tags">${project.tags}</span>
