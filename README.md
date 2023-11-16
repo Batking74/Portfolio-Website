@@ -3,7 +3,7 @@
 ### Description
 Nazir's Portfolio Website showcasing coding projects!
 
-![Image of Nazir's Portfolio Website](IMG/Portfolio_Website.png)
+![Image of Nazir's Portfolio Website](IMG/Portfolio_Website.webp)
 
 
 ## Technologies Used

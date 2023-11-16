@@ -99,22 +99,22 @@ hashTags.enqueue(`${html} ${css}`);
 
 // Project Images
 const image = new Queue();
-image.enqueue('./IMG/Palmer_Studios_Project.png');
-image.enqueue('./IMG/Budget_Calculator_Project.png');
-image.enqueue('./IMG/Talking_Computer_Project.png');
-image.enqueue('./IMG/Art_Portfolio_Project.png');
-image.enqueue('./IMG/Password Generator.png');
-image.enqueue('./IMG/Meal_Discovery_Project.png');
-image.enqueue('./IMG/Project-Tracker-Project.png');
-image.enqueue('./IMG/Work_day_calendar.png');
-image.enqueue('./IMG/Landing_Page_Project_1.png');
-image.enqueue('./IMG/Login_Project.png');
-image.enqueue('./IMG/Horiseon_Project.png');
-image.enqueue('./IMG/Calculator_project.png');
-image.enqueue('./IMG/Weather-Dashboard.png');
-image.enqueue('./IMG/Find-Repo-Issues-Project.png');
-image.enqueue('./IMG/Store-Design-Project.png');
-image.enqueue('./IMG/Blog-Design-Project.png');
+image.enqueue('./IMG/Palmer_Studios_Project.webp');
+image.enqueue('./IMG/Budget_Calculator_Project.webp');
+image.enqueue('./IMG/Talking_Computer_Project.webp');
+image.enqueue('./IMG/Art_Portfolio_Project.webp');
+image.enqueue('./IMG/Password Generator.webp');
+image.enqueue('./IMG/Meal_Discovery_Project.webp');
+image.enqueue('./IMG/Project-Tracker-Project.webp');
+image.enqueue('./IMG/Work_day_calendar.webp');
+image.enqueue('./IMG/Landing_Page_Project_1.webp');
+image.enqueue('./IMG/Login_Project.webp');
+image.enqueue('./IMG/Horiseon_Project.webp');
+image.enqueue('./IMG/Calculator_project.webp');
+image.enqueue('./IMG/Weather-Dashboard.webp');
+image.enqueue('./IMG/Find-Repo-Issues-Project.webp');
+image.enqueue('./IMG/Store-Design-Project.webp');
+image.enqueue('./IMG/Blog-Design-Project.webp');
 
 // Project URL
 const url = new Queue();
