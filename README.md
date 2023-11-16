@@ -15,4 +15,3 @@ Nazir's Portfolio Website showcasing coding projects!
 Deployed Site: https://batking74.github.io/Portfolio-Website/
 
 GitHub Repo: https://github.com/Batking74/Portfolio-Website/tree/JS-Portfolio
-![Alt text](image.png)
