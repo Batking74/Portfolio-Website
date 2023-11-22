@@ -122,7 +122,7 @@ image.enqueue('./IMG/Android_Login_Page.webp');
 // Project URL
 const url = new Queue();
 url.enqueue('https://batking74.github.io/Kekes_Model_Website/');
-url.enqueue('https://batking74.github.io/Budget-Calculator/');
+url.enqueue('https://test2-8b61559ca773.herokuapp.com/');
 url.enqueue('https://batking74.github.io/Talking_Computer_Project/');
 url.enqueue('https://batking74.github.io/Digital_Art_Portfolio_Project--First-ever-project-/');
 url.enqueue('https://batking74.github.io/Password-Generator/');
