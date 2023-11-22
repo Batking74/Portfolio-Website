@@ -56,8 +56,8 @@ class myProjects {
 }
 
 const placeHolder = ['Coming Soon', '', './IMG/Lion2.JPG', '#']
-const tags = ['#HTML', '#CSS', '#JS', '#Node.js', '#SQL', '#Jquery', '#Bootstrap'];
-const [html, css, js, node, sql, jQuery, bootstrap] = tags
+const tags = ['#HTML', '#CSS', '#JS', '#Node.js', '#SQL', '#Jquery', '#Bootstrap', '#Java', '#XML', '#Groovy'];
+const [html, css, js, node, sql, jQuery, bootstrap, java, xml, groovy] = tags
 
 // Project Titles
 const title = new Queue();
@@ -77,6 +77,7 @@ title.enqueue('Weather Dashboard');
 title.enqueue('Find Repo Issues');
 title.enqueue('Store Design');
 title.enqueue('Blog Design');
+title.enqueue('Android Login App with Google Sign In');
 
 // Project Hashtags
 const hashTags = new Queue();
@@ -96,6 +97,7 @@ hashTags.enqueue(`${html} ${css} ${js}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
 hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css}`);
+hashTags.enqueue(`${java} ${xml} ${groovy}`);
 
 // Project Images
 const image = new Queue();
@@ -115,6 +117,7 @@ image.enqueue('./IMG/Weather-Dashboard.webp');
 image.enqueue('./IMG/Find-Repo-Issues-Project.webp');
 image.enqueue('./IMG/Store-Design-Project.webp');
 image.enqueue('./IMG/Blog-Design-Project.webp');
+image.enqueue('./IMG/Android_Login_Page.webp');
 
 // Project URL
 const url = new Queue();
@@ -134,6 +137,7 @@ url.enqueue('https://batking74.github.io/Weather-Dashboard/');
 url.enqueue('https://batking74.github.io/Find-Repo-Issues/');
 url.enqueue('https://batking74.github.io/Store-Design/');
 url.enqueue('https://batking74.github.io/Blog-Design/');
+url.enqueue('');
 projectsComingSoon(0);
 
 const productList = new Queue();

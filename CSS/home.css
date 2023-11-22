@@ -11,7 +11,7 @@ html {
 body {
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg,#0000ff, #000000, #0000ff);
+    background: linear-gradient(180deg, #0000ff, #000000, #0000ff);
     color: #e1dad5;
     font-family: 'roboto', sans-serif;
 }
@@ -55,7 +55,8 @@ body {
     opacity: 0.7;
 }
 
-.link.active::before, .seperator::before {
+.link.active::before,
+.seperator::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -67,7 +68,8 @@ body {
     background: #e1dad5;
 }
 
-.link.active::after, .seperator::after {
+.link.active::after,
+.seperator::after {
     content: '';
     position: absolute;
     bottom: 2px;
@@ -153,7 +155,8 @@ body {
     margin-bottom: 50px;
 }
 
-.btn, .music-btn {
+.btn,
+.music-btn {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 25px;
@@ -164,7 +167,10 @@ body {
     transition: 2s;
 }
 
-.btn:hover, .btn:focus, .music-btn:hover, .music-btn:focus {
+.btn:hover,
+.btn:focus,
+.music-btn:hover,
+.music-btn:focus {
     transform: scale(1.1);
     transition-duration: 2s;
     cursor: pointer;
@@ -177,7 +183,7 @@ body {
 }
 
 .about {
-    width: 100%; 
+    width: 100%;
     height: auto;
     padding: 50px 10vw;
 }
@@ -210,7 +216,8 @@ body {
     grid-gap: 50px;
 }
 
-.left-col, .right-col {
+.left-col,
+.right-col {
     position: relative;
 }
 
@@ -271,17 +278,20 @@ body {
     line-height: 200px;
 }
 
-.skill-card:hover, .skill-card:active {
+.skill-card:hover,
+.skill-card:active {
     background: var(--bg);
     transform: scale(1.1);
     transform: translateY(-15px);
 }
 
-.skill-card:hover .skill, .skill-card:active .skill {
+.skill-card:hover .skill,
+.skill-card:active .skill {
     color: #ffffff;
 }
 
-.project, .contact {
+.project,
+.contact {
     position: relative;
     padding: 50px 10vw;
 }
@@ -313,7 +323,8 @@ body {
     color: white;
 }
 
-.project-container {
+.project-container,
+.certificate-container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -361,12 +372,23 @@ body {
     width: 90%;
 }
 
-.project-card:hover .content{
+.project-card:hover .content {
     opacity: 1;
 }
 
 .project-card .hide {
     display: none;
+}
+
+/* Certificate Styles */
+.certificate-container {
+    margin-top: 70px;
+}
+
+.certificate-description {
+    font-weight: 300;
+    font-size: 15.5px;
+    text-align: center;
 }
 
 /* Contact form */
@@ -376,7 +398,8 @@ body {
     position: relative;
 }
 
-.contact-form input, .message {
+.contact-form input,
+.message {
     width: 100%;
     display: block;
     height: 50px;
@@ -386,7 +409,7 @@ body {
     color: #ffffff;
     border: none;
     font-size: large;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     outline: none;
     margin: 30px 0;
     text-transform: capitalize;
@@ -441,11 +464,11 @@ body {
 }
 
 .changeNavColorByToggle {
-    background: linear-gradient(90deg,#0000ff, #131313b1, #0000ff);
+    background: linear-gradient(90deg, #0000ff, #131313b1, #0000ff);
 }
 
 .footerBackgroundColorToggle {
-    background: linear-gradient(90deg,#0000ff, #d1d1d1cb, #0000ff);
+    background: linear-gradient(90deg, #0000ff, #d1d1d1cb, #0000ff);
     color: #000000;
 }
 
@@ -551,8 +574,14 @@ body {
         min-width: 320px;
     }
 
-    .skill-container, .project-container {
+    .skill-container,
+    .project-container,
+    .certificate-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificate-description {
+        font-size: 13.5px;
     }
 
     .skill-card {
@@ -567,7 +596,11 @@ body {
         font-size: 12px;
     }
 
-    p, .sub-heading, .about-paragraph, .left-col::before, .tags {
+    p,
+    .sub-heading,
+    .about-paragraph,
+    .left-col::before,
+    .tags {
         font-size: 1.4rem;
     }
 
@@ -578,8 +611,14 @@ body {
         height: 340px;
     }
 
-    .skill-container, .project-container {
+    .skill-container,
+    .project-container,
+    .certificate-container {
         grid-template-columns: 1fr;
+    }
+
+    .certificate-description {
+        font-size: 20px;
     }
 
     .skill {
