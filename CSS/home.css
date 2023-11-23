@@ -451,11 +451,37 @@ body {
 /* Footer */
 .footer {
     width: 100%;
-    height: 30px;
+    height: 150px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #ff3559;
-    text-transform: capitalize;
     line-height: 30px;
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.footer p {
+    background-color: #000;
+    font-size: 15px;
+    padding: 10px 0 10px 0;
+}
+
+.footer div img {
+    margin-top: 30px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    width: 50px;
+}
+
+.footer div a {
+    text-decoration: none;
 }
 
 /* Toggle Background Colors on click */
@@ -588,6 +614,11 @@ body {
         /* important value overwrites everything in the class with the new styles aka grid-column. */
         grid-column: 1 span !important;
     }
+
+    /* Footer */
+    .footer div img {
+        margin-top: 30px;
+    }
 }
 
 /* mobile view */
@@ -639,5 +670,16 @@ body {
 
     .first-name {
         margin-bottom: 20px !important;
+    }
+
+    /* Footer */
+    .footer div img {
+        margin-top: 15px;
+        width: 35px;
+        width: 35px;
+    }
+
+    .footer p {
+        font-size: 12.5px;
     }
 }
