@@ -77,6 +77,7 @@ title.enqueue('Weather Dashboard');
 title.enqueue('Find Repo Issues');
 title.enqueue('Store Design');
 title.enqueue('Blog Design');
+title.enqueue('Portfolio Project');
 title.enqueue('Android Login App with Google Sign In');
 
 // Project Hashtags
@@ -95,6 +96,7 @@ hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
 hashTags.enqueue(`${html} ${css} ${js}`);
+hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${html} ${css}`);
 hashTags.enqueue(`${java} ${xml} ${groovy}`);
@@ -117,6 +119,7 @@ image.enqueue('./IMG/Weather-Dashboard.webp');
 image.enqueue('./IMG/Find-Repo-Issues-Project.webp');
 image.enqueue('./IMG/Store-Design-Project.webp');
 image.enqueue('./IMG/Blog-Design-Project.webp');
+image.enqueue('./IMG/Naz_Portfolio_Project_Screenshot.webp');
 image.enqueue('./IMG/Android_Login_Page.webp');
 
 // Project URL
@@ -137,6 +140,7 @@ url.enqueue('https://batking74.github.io/Weather-Dashboard/');
 url.enqueue('https://batking74.github.io/Find-Repo-Issues/');
 url.enqueue('https://batking74.github.io/Store-Design/');
 url.enqueue('https://batking74.github.io/Blog-Design/');
+url.enqueue('https://batking74.github.io/Portfolio-Project/');
 url.enqueue('');
 projectsComingSoon(0);
 
