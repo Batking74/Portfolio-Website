@@ -472,6 +472,11 @@ body {
     padding: 10px 0 10px 0;
 }
 
+/* Styling my Contact info */
+.footer p span {
+    color: #ca1919;
+}
+
 .footer div img {
     margin-top: 30px;
     width: 50px;
