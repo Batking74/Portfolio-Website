@@ -154,10 +154,10 @@ image.enqueue('./IMG/Find-Repo-Issues-Project.webp');
 image.enqueue('./IMG/Store-Design-Project.webp');
 image.enqueue('./IMG/Blog-Design-Project.webp');
 image.enqueue('./IMG/Naz_Portfolio_Project_Screenshot.webp');
-image.enqueue('../IMG/MedShareNetwork.webp');
-image.enqueue('../IMG/Placeholder.webp');
-image.enqueue('../IMG/Placeholder.webp');
-image.enqueue('../IMG/Placeholder.webp');
+image.enqueue('./IMG/MedShareNetwork.webp');
+image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Android_Login_Page.webp');
 
 

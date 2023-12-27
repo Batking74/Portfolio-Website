@@ -80,7 +80,7 @@ function filterProjects(i, e) {
 // Displays Products on Web Page
 function displayTestimonials(testimonial) {
     let partnerDescription;
-    if(testimonial.image === null) testimonial.image = '../IMG/Lion2.webp';
+    if(testimonial.image === null) testimonial.image = './IMG/Lion2.webp';
     if(testimonial.steakholderTag === 'Client') {
         partnerDescription = `${testimonial.steakholderTag}: ${testimonial.serviceProvided}`;
     }

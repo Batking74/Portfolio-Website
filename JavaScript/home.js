@@ -66,7 +66,7 @@ backgroundBtn.addEventListener('click', () => {
 
 // Resume Button
 resumeBtn.addEventListener('click', () => {
-    window.open('../Certificates/Nazirs_edX_Prompt_Engineering_Certificate.pdf', '_blank');
+    window.open('./Assets/Nazir_Knuckles_Portfolio_Resume.pdf', '_blank');
 })
 
 
