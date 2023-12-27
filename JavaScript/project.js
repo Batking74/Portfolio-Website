@@ -1,3 +1,8 @@
+// Targeting HTML Elements
+const projectContainer = document.querySelector('.project-container');
+const filter = document.querySelectorAll('.project-filter-btn');
+
+
 // Queue Data Structure
 class Queue {
     constructor() {
@@ -43,9 +48,9 @@ class Queue {
     }
 }
 
-// Creating Dynamic Project Card
-const projectContainer = document.querySelector('.project-container');
-class myProjects {
+
+// Creating Project Class
+class Project {
     constructor(name, tags, image, link) {
         // New Instances
         this.name = name;
@@ -55,9 +60,28 @@ class myProjects {
     }
 }
 
-const placeHolder = ['Coming Soon', '', './IMG/Lion2.JPG', '#']
-const tags = ['#HTML', '#CSS', '#JS', '#Node.js', '#SQL', '#Jquery', '#Bootstrap', '#Java', '#XML', '#Groovy'];
-const [html, css, js, node, sql, jQuery, bootstrap, java, xml, groovy] = tags
+
+const placeHolder = ['Coming Soon', '', './IMG/Lion2.JPG', '#'];
+
+
+// Filter Tags
+const tags = [
+    '#HTML',
+    '#CSS',
+    '#JS',
+    '#Node.js',
+    '#SQL',
+    '#Jquery',
+    '#Bootstrap',
+    '#Java',
+    '#XML',
+    '#Groovy',
+    '#Sequelize',
+    '#Express',
+    '#Self-Teaching',
+    '#Bootcamp'];
+const [html, css, js, node, sql, jQuery, bootstrap, java, xml, groovy, sequelize, express, selfTeach, bootcamp] = tags;
+
 
 // Project Titles
 const title = new Queue();
@@ -78,28 +102,38 @@ title.enqueue('Find Repo Issues');
 title.enqueue('Store Design');
 title.enqueue('Blog Design');
 title.enqueue('Portfolio Project');
+title.enqueue('MedShareNetwork');
+title.enqueue('Coming Soon');
+title.enqueue('Coming Soon');
+title.enqueue('Coming Soon');
 title.enqueue('Android Login App with Google Sign In');
+
 
 // Project Hashtags
 const hashTags = new Queue();
-hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql}`);
-hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql}`);
-hashTags.enqueue(`${html} ${css} ${js}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${html} ${css} ${js}`);
+hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${js} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${js} ${bootcamp}`);
 // hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
-hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
-hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${html} ${css} ${js}`);
-hashTags.enqueue(`${html} ${css} ${js}`);
-hashTags.enqueue(`${html} ${css} ${js}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${html} ${css}`);
-hashTags.enqueue(`${java} ${xml} ${groovy}`);
+hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${js} ${jQuery} ${bootstrap} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${js} ${selfTeach}`);
+hashTags.enqueue(`${html} ${css} ${js} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${js} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${sequelize} ${express} ${bootcamp}`);
+hashTags.enqueue(``);
+hashTags.enqueue(``);
+hashTags.enqueue(``);
+hashTags.enqueue(`${java} ${xml} ${groovy} ${selfTeach}`);
+
 
 // Project Images
 const image = new Queue();
@@ -120,11 +154,16 @@ image.enqueue('./IMG/Find-Repo-Issues-Project.webp');
 image.enqueue('./IMG/Store-Design-Project.webp');
 image.enqueue('./IMG/Blog-Design-Project.webp');
 image.enqueue('./IMG/Naz_Portfolio_Project_Screenshot.webp');
+image.enqueue('../IMG/MedShareNetwork.webp');
+image.enqueue('../IMG/Placeholder.webp');
+image.enqueue('../IMG/Placeholder.webp');
+image.enqueue('../IMG/Placeholder.webp');
 image.enqueue('./IMG/Android_Login_Page.webp');
 
-// Project URL
+
+// Project URL's
 const url = new Queue();
-url.enqueue('https://batking74.github.io/Kekes_Model_Website/');
+url.enqueue('https://palmer-studios-f1975e2e82dd.herokuapp.com/');
 url.enqueue('https://budgeting-calculator-878dd6a27579.herokuapp.com/');
 url.enqueue('https://batking74.github.io/Talking_Computer_Project/');
 url.enqueue('https://batking74.github.io/Digital_Art_Portfolio_Project--First-ever-project-/');
@@ -141,46 +180,51 @@ url.enqueue('https://batking74.github.io/Find-Repo-Issues/');
 url.enqueue('https://batking74.github.io/Store-Design/');
 url.enqueue('https://batking74.github.io/Blog-Design/');
 url.enqueue('https://batking74.github.io/Portfolio-Project/');
+url.enqueue('https://medsharenetwork-3691a9c0e268.herokuapp.com/');
+url.enqueue('');
+url.enqueue('');
+url.enqueue('');
 url.enqueue('');
 projectsComingSoon(0);
 
 const productList = new Queue();
 
-// Instantiation
+// Instantiation of all Projects
 for(let i = 0; i < title.size(); i++) {
-    const object = new myProjects(title.getIndex(i), hashTags.getIndex(i), image.getIndex(i), url.getIndex(i));
+    const object = new Project(title.getIndex(i), hashTags.getIndex(i), image.getIndex(i), url.getIndex(i));
     productList.enqueue(object);
 }
 
+
+// Displaying Each Project to the UI
 productList.list.forEach(project => displayProjects(project));
 
-// Filter Projects
-const filter = document.querySelectorAll('.filter-btn');
-filter.forEach(btn => {
 
-    // If any of the buttons are clicked filter the projects based on the skill
+// Adding EventListeners to all buttons
+filter.forEach(btn => {
     btn.addEventListener('click', (e) => {
         if(e.target.classList[1] != 'active') {
             projectContainer.innerHTML = '';
-            for(let i = 0; i < productList.size(); i++) {
-                const project = productList.getIndex(i);
-                if(project.tags.includes(`#${e.target.id}`)) {
-                    displayProjects(project);
-                }
-                else if(e.target.id === 'all') {
-                    displayProjects(project);
-                }
-            }
+            for(let i = 0; i < productList.size(); i++) filterProjects(i, e);
             filter.forEach(ele => ele.classList.remove('active'));
             btn.classList.add('active');
         }
     })
 })
 
+
+// Filters out projects based on the skill #
+function filterProjects(i, e) {
+    const project = productList.getIndex(i);
+    if(project.tags.includes(`#${e.target.id}`)) displayProjects(project);
+    else if(e.target.id === 'all-projects') displayProjects(project);
+}
+
+
 // Displays Products on Web Page
 function displayProjects(project) {
     projectContainer.innerHTML += `
-        <a href="${project.link}" class="project-card" data-tags="#all, ${project.tags}">
+        <a href="${project.link}" class="project-card" data-tags="#all-projects, ${project.tags}">
             <img loading="lazy" src="${project.image}" alt="${project.name}">
             <div class="content">
                 <h1 class="project-name">${project.name}</h1>

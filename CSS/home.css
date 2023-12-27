@@ -11,7 +11,7 @@ html {
 body {
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg, #0000ff, #000000, #0000ff);
+    background: linear-gradient(90deg, #000, #0000ff, #000000);
     color: #e1dad5;
     font-family: 'roboto', sans-serif;
 }
@@ -156,7 +156,7 @@ body {
 }
 
 .btn,
-.music-btn {
+#resumeBtn {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 25px;
@@ -169,8 +169,8 @@ body {
 
 .btn:hover,
 .btn:focus,
-.music-btn:hover,
-.music-btn:focus {
+#resumeBtn:hover,
+#resumeBtn:focus {
     transform: scale(1.1);
     transition-duration: 2s;
     cursor: pointer;
@@ -178,7 +178,7 @@ body {
     color: #ffffff;
 }
 
-.music-btn {
+#resumeBtn {
     margin-left: 10px;
 }
 
@@ -222,12 +222,12 @@ body {
 }
 
 .left-col::before {
-    content: 'SaloneFunnyBad';
+    content: "Mr. Knucks (Naz) The sleepless dev.";
     text-transform: capitalize;
     transform: rotate(30deg);
     position: absolute;
-    right: 0;
-    top: -25px;
+    right: -20px;
+    top: -40px;
 }
 
 .left-col::after {
@@ -303,7 +303,7 @@ body {
     text-align: center;
 }
 
-.filter-btn {
+.project-filter-btn, .testimonial-filter-btn {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -313,12 +313,12 @@ body {
     transition: 1s;
 }
 
-.filter-btn:hover {
+.project-filter-btn:hover, .testimonial-filter-btn:hover {
     transform: scale(1.1);
     background: linear-gradient(90deg, #00000067, #887e14, #00000067);
 }
 
-.filter-btn.active {
+.project-filter-btn.active, .testimonial-filter-btn.active {
     background: linear-gradient(90deg, #0000005e, #887e14, #0000005e);
     color: white;
 }
@@ -473,7 +473,7 @@ body {
 }
 
 /* Styling my Contact info */
-.footer p span {
+.footer p span, .footer p a {
     color: #ca1919;
 }
 
@@ -503,9 +503,6 @@ body {
     color: #000000;
 }
 
-.highlight-Toggle {
-    color: #000000 !important;
-}
 
 /* tablet view */
 @media (max-width: 996px) {

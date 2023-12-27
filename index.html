@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nazir's Portfolio Website showcasing coding projects!">
+    <meta name="description" content="Nazir's Portfolio Website!">
     <title>Nazir's Portfolio</title>
     <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="stylesheet" href="./CSS/testimonial.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="changeBackgroundColor">
+
+
 
     <!-- Start of Navigation -->
     <nav class="navbar">
@@ -20,46 +24,88 @@
         <ul class="links-container">
             <li class="links-item"><a href="#" class="link active">Home</a></li>
             <li class="links-item"><a href="#about-section" class="link">About</a></li>
-            <li class="links-item"><a href="#project-section" class="link">Project</a></li>
-            <li class="links-item"><a href="#certificate-section" class="link">Certificate</a></li>
+            <li class="links-item"><a href="#skill-section" class="link">Skills</a></li>
+            <li class="links-item"><a href="#project-section" class="link">Projects</a></li>
+            <li class="links-item"><a href="#Testimonials-Section" class="link">Testimonials</a></li>
+            <li class="links-item"><a href="#certificate-section" class="link">Certificates</a></li>
             <li class="links-item"><a href="#contact-section" class="link">Contact</a></li>
         </ul>
-        <!-- <div id="validationError" class="validationError"></div> -->
+        <div id="validationError" class="validationError"></div>
     </nav>
+
+
+
+    <!-- Start of Main Content -->
     <main>
-        
         <!-- Start of Home Section -->
         <section class="home">
             <div class="hero-content">
-                <h1 class="hero-heading"><span id="highlight-Toggle" class="highlight">Hi, </span>I am Nazir</h1>
+                <h1 class="hero-heading"><span class="highlight highlight-Toggle">Hi, </span>I am Nazir</h1>
                 <p class="profession">Web Developer</p>
-                <p class="info">Passionate Web Developer on a mission to transform new ideas into digital experiences! <strong id="Countdown-Text">You have <span id="countdown">300</span> seconds left!</strong></strong></p>
+                <p class="info">
+                    Devoted Web Developer on a mission to transform new ideas into digital experiences!
+                    <strong id="Countdown-Text">You have <span id="countdown">300</span> seconds left!</strong>
+                </p>
                 <button id="background-Toggle" class="btn">Background</button>
-                <!-- <button class="music-btn playMusic">Music</button> -->
+                <!-- Working on this feature! -->
+                <button id="resumeBtn">Resume</button>
             </div>
             <img src="./IMG/14_year_old_naz.webp" class="image" alt="Nazir Knuckles at age 14 with high-top fade.">
         </section>
 
+
+
         <!-- Start of About Section -->
         <section class="about" id="about-section">
-            <h2 class="heading">about <span id="highlight-Toggle" class="highlight">me</span></h2>
-            <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+            <h2 class="heading">about <span class="highlight highlight-Toggle">me</span></h2>
+            <p class="sub-heading">Learn about Naz's journey, where strength and devotion intertwine to shape the person
+                he is today!</p>
             <div class="seperator"></div>
             <div class="about-me-container">
                 <div class="left-col">
-                    <img src="./IMG/Nazir_Senior_Year.webp" srcset="./IMG/Nazir_Senior_Year.webp 1x" width="calc(100% - 900px)" height="400px" class="about-image" alt="Image of Nazir at age 17">
+                    <img src="./IMG/Nazir_Senior_Year.webp" srcset="./IMG/Nazir_Senior_Year.webp 1x"
+                        width="calc(100% - 900px)" height="400px" class="about-image" alt="Image of Nazir at age 17">
                 </div>
                 <div class="right-col">
                     <p id="ReadTextAI" class="about-paragraph">
-                        My journey is marked by a commitment to constant learning, exploring new technologies, and refining my craft. Dive into my portfolio, where each project is a testament to my dedication to creating impactful and user-friendly websites.
-                        With a love for clean design and a commitment to functionality, I specialize in crafting websites that not only meet the brief but exceed expectations. Constantly exploring new technologies and staying in perpetual beta, I'm on a mission to create seamless, user-centric solutions. Let's collaborate and bring your digital ideas to life!
+                        I initiated my journey as a Self-Taught developer, navigating the expansive landscape of
+                        programming with unwavering curiosity and determination. through meticulous exploration, I honed
+                        my Web Development skills, progressing with each line of code. My devotion for coding took root
+                        long before my formal education at the University of Minnesota's Full-Stack Coding Bootcamp,
+                        evolving during my free time and establishing a foundation for my technical prowess. This unique
+                        blend of self-directed learning and structured education distinguishes me from the crowd as I
+                        continue to embrace my Self-Taught roots. It encompasses adaptability, resourcefulness, and
+                        dedication to being the best that I can be.
+
+                        Within the structured confines of the bootcamp, I seamlessly integrate the spirit of a
+                        Self-Taught developer, making every project a testament to my versatile problem-solving
+                        abilities. My commitment to continuous improvement and autonomous learning ensures that I not
+                        only grasp the intricacies of Web Development, but also bring a fresh perspective to each
+                        endeavor.
+
+                        In the dynamic world of technology, I am not just a coder; I am an innovative problem-solver who
+                        thrives on challenges. My unique journey, marked by a blend of self-discovery, formal education,
+                        and experiences, positions me to contribute creatively to the ever-evolving landscape of Web
+                        Development. Whether it's crafting elegant code, designing intuitive user interfaces, or
+                        collaborating on complex projects, I bring a distinctive set of skills and perspectives that set
+                        me apart in the realm of Web Development and Tech Repairing.
                     </p>
                     <button id="play-button" data-toggle="off" class="btn">Read Aloud</button>
                 </div>
             </div>
-            
-            <!-- Start of Skills Section -->
-            <h2 id="highlight-Toggle" class="heading">Languages, frameworks, and tools I know and use</h2>
+        </section>
+
+
+
+        <!-- Start of Skill Section -->
+        <section class="project" id="skill-section">
+            <h2 class="heading highlight-Toggle">
+                Tech <span class="highlight highlight-Toggle">Arsenal</span>
+            </h2>
+            <p class="sub-heading">
+                Fueled by curiosity and nurtured by exploration, I conquer new horizons in the ever-evolving tech
+                landscape!
+            </p>
             <div class="seperator"></div>
             <div class="skill-container">
                 <div class="skill-card" style="--bg: #ffa600ac;">
@@ -77,8 +123,11 @@
                 <div class="skill-card" style="--bg: #ffff00b7;">
                     <p class="skill">Sigma Notation</p>
                 </div>
-                <div class="skill-card" style="--bg: #44ff00b7;">
-                    <p class="skill">Binary</p>
+                <div class="skill-card" style="--bg: #185801b7;">
+                    <p class="skill" style="font-size: 20px;">Recursive Tree Method</p>
+                </div>
+                <div class="skill-card" style="--bg: #618454b7;">
+                    <p class="skill" style="font-size: 20px;">Asymptotic Analysis</p>
                 </div>
                 <div class="skill-card" style="--bg: #0c35bd;">
                     <p class="skill">React</p>
@@ -110,11 +159,14 @@
                 <div class="skill-card" style="--bg: #a52a2a;">
                     <p class="skill">Version Control</p>
                 </div>
+                <div class="skill-card" style="--bg: #d86666;">
+                    <p class="skill">Sequelize</p>
+                </div>
                 <div class="skill-card" style="--bg: #12c0ff;">
                     <p class="skill">Computer Repair</p>
                 </div>
-                <div class="skill-card" style="--bg: #5cd606b3;">
-                    <p class="skill">Phone Repair</p>
+                <div class="skill-card" style="--bg: #9fb3b7b3;">
+                    <p class="skill">iPhone Repair</p>
                 </div>
             </div>
             <br>
@@ -124,7 +176,7 @@
             <br>
             <br>
             <br>
-            <h2 id="highlight-Toggle" class="heading">What I want to Learn</h2>
+            <h2 class="heading highlight-Toggle">Self Teaching Aspirations</h2>
             <div class="seperator"></div>
             <div class="skill-container">
                 <div class="skill-card" style="--bg: #3f37ce;">
@@ -132,6 +184,9 @@
                 </div>
                 <div class="skill-card" style="--bg: #3f37ce;">
                     <p class="skill">Swift</p>
+                </div>
+                <div class="skill-card" style="--bg: #ec0eb8;">
+                    <p class="skill">Sass</p>
                 </div>
                 <div class="skill-card" style="--bg: #736fc4;">
                     <p class="skill" style="font-size: 20px;">iOS Development</p>
@@ -142,8 +197,20 @@
                 <div class="skill-card" style="--bg: #7d37ce;">
                     <p class="skill" style="font-size: 20px;">llEleven Labs API</p>
                 </div>
+                <div class="skill-card" style="--bg: #3799ce;">
+                    <p class="skill">Php</p>
+                </div>
+                <div class="skill-card" style="--bg: #37ce3a;">
+                    <p class="skill" style="font-size: 20px;">More SEO Techniques</p>
+                </div>
+                <div class="skill-card" style="--bg: #daa820;">
+                    <p class="skill" style="font-size: 20px;">More Android Development</p>
+                </div>
                 <div class="skill-card" style="--bg: #3f37ce;">
                     <p class="skill" style="font-size: 20px;">Project Management</p>
+                </div>
+                <div class="skill-card" style="--bg: #37ce94;">
+                    <p class="skill" style="font-size: 20px;">More Device Repairs</p>
                 </div>
                 <div class="skill-card" style="--bg: #7c7b94;">
                     <p class="skill" style="font-size: 20px;">More Computer Science</p>
@@ -151,64 +218,110 @@
             </div>
         </section>
 
+
+
         <!-- Start of Coding Projects Section -->
         <section class="project" id="project-section">
-            <h2 class="heading">Project<span id="highlight-Toggle" class="highlight">s</span></h2>
-            <p class="sub-heading">Dive in, explore, and let's create the next chapter together!</p>
+            <h2 class="heading">Project<span class="highlight highlight-Toggle">s</span></h2>
+            <p class="sub-heading">Dive into the projects that shaped my journey, where innovation meets realization!
+            </p>
             <div class="seperator"></div>
             <div class="filters">
-                <button class="filter-btn active" id="all">all</button>
-                <button class="filter-btn" id="JS">JavaScript</button>
-                <button class="filter-btn" id="Bootstrap">Bootstrap</button>
-                <button class="filter-btn" id="Java">Java</button>
-                <button class="filter-btn" id="React">React</button>
-                <button class="filter-btn" id="Python">Python</button>
-                <button class="filter-btn" id="SQL">SQL</button>
-                <button class="filter-btn" id="Node.js">Node.js</button>
-                <button class="filter-btn" id="MongoDB">MongoDB</button>
+                <button class="project-filter-btn active" id="all-projects">all</button>
+                <button class="project-filter-btn" id="JS">JavaScript</button>
+                <button class="project-filter-btn" id="Bootstrap">Bootstrap</button>
+                <button class="project-filter-btn" id="Java">Java</button>
+                <button class="project-filter-btn" id="React">React</button>
+                <button class="project-filter-btn" id="Python">Python</button>
+                <button class="project-filter-btn" id="SQL">SQL</button>
+                <button class="project-filter-btn" id="Node.js">Node.js</button>
+                <button class="project-filter-btn" id="MongoDB">MongoDB</button>
+                <button class="project-filter-btn" id="Self-Teaching">Self Teaching</button>
+                <button class="project-filter-btn" id="Bootcamp">Bootcamp</button>
             </div>
             <div class="project-container"></div>
         </section>
 
+
+
+        <!-- Start of Client Testimonials Section -->
+        <section class="project" id="Testimonials-Section">
+            <h2 class="heading">Client Testimonial<span class="highlight highlight-Toggle">s</span></h2>
+            <p class="sub-heading">Explore the voices of satisfied clients as they share their satisfaction with my
+                services!</p>
+            <div class="seperator"></div>
+            <div class="filters">
+                <button class="testimonial-filter-btn active" id="all-testimonials">All</button>
+                <button class="testimonial-filter-btn" id="WebDev">Web Development</button>
+                <button class="testimonial-filter-btn" id="TechRepairing">Tech Repairing</button>
+                <button class="testimonial-filter-btn" id="Collaborator">Collaborators</button>
+                <button class="testimonial-filter-btn" id="Client">Clients</button>
+            </div>
+            <div class="testimonial-container">
+                <div class="swiper">
+                    <ul class="swiper-wrapper testimonials-append-container"></ul>
+                    <div class="swiper-pagination"></div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+
+
         <!-- Start of Certificate Section -->
         <section class="project" id="certificate-section">
-            <h2 class="heading">Continuous Learning Certificate<span id="highlight-Toggle" class="highlight">s</span></h2>
-            <p class="sub-heading">Keeping up to date with the leastest, and greatest tech</p>
+            <h2 class="heading">
+                Continuous Learning Certificate<span class="highlight highlight-Toggle">s</span>
+            </h2>
+            <p class="sub-heading">Keeping up to date with the leastest, and greatest tech!</p>
             <div class="seperator"></div>
             <div class="certificate-container">
 
                 <!-- Prompt Engineering Certificate -->
                 <a href="./Certificates/Nazirs_edX_Prompt_Engineering_Certificate.pdf" class="project-card">
-                    <img loading="lazy" src="./IMG/Nazirs_edX_Prompt_Engineering_Certificate.webp" alt="Nazirs edX Prompt Engineering Certificate">
+                    <img loading="lazy" src="./IMG/Nazirs_edX_Prompt_Engineering_Certificate.webp"
+                        alt="Nazirs edX Prompt Engineering Certificate">
                     <div class="content">
                         <p class="certificate-description">
-                            Prompt Engineering: Learned about AI, Machine Learning, Transformer Models, Deep Learning, Prompt Engineering Techniques such as Zero-Shot-Prompting, First-Shot-Prompting, Condition-Shot-Prompting, and so on.
+                            Prompt Engineering: Learned about AI, Machine Learning, Transformer Models, Deep Learning,
+                            Prompt Engineering Techniques such as Zero-Shot-Prompting, First-Shot-Prompting,
+                            Condition-Shot-Prompting, and so on.
                         </p>
                         <span class="tags">#EdX</span>
                     </div>
                 </a>
             </div>
         </section>
-    
+
+
+
         <!-- Contact form -->
         <section class="contact" id="contact-section">
             <form id="form" action="./HTML/thankYou.html">
-                <h2 class="heading">Contact<span id="highlight-Toggle" class="highlight"> me</span></h2>
-                <p class="sub-heading">Lorem ipsum dolor sit amet consectetur.</p>
+                <h2 class="heading">Contact<span class="highlight highlight-Toggle"> me</span></h2>
+                <p class="sub-heading">I'm genuinely excited to provide support and empower visions. Feel free to
+                    contact me, and we'll navigate this journey together!</p>
                 <div class="seperator"></div>
                 <div class="contact-form">
                     <div class="name">
-                    <input type="text" id="first-name" class="first-name" placeholder="First name">
-                    <div id="validationError" class="validationError"></div>
-                    <input type="text" id="last-name" class="last-name" placeholder="Last name">
+                        <input type="text" id="first-name" class="first-name" placeholder="First name">
+                        <div id="validationError" class="validationError"></div>
+                        <input type="text" id="last-name" class="last-name" placeholder="Last name">
+                    </div>
+                    <input type="email" placeholder="Email" id="email" class="email">
+                    <textarea maxlength="5000" id="message" class="message" placeholder="Message..." cols="30"
+                        rows="10"></textarea>
+                    <button type="submit" id="contact-btn" class="btn">Contact</button>
                 </div>
-                <input type="email" placeholder="Email" id="email" class="email">
-                <textarea maxlength="5000" id="message" class="message" placeholder="Message..." cols="30" rows="10"></textarea>
-                <button type="submit" id="contact-btn" class="btn">Contact</button>
-            </div>
             </form>
         </section>
     </main>
+
+
+
+    <!-- Footer -->
     <footer id="footerBackgroundColorToggle" class="footer">
         <div>
             <a href="https://www.instagram.com/mr_blacknificent/">
@@ -225,11 +338,12 @@
             </a>
         </div>
         <p>
-            Made With Love By Nazir Knuckles Email: <span>nazirknuckles@gmail.com</span>
+            Made With Love By Nazir Knuckles Email: <a
+                href="mailto: nazirknuckles@gmail.com">nazirknuckles@gmail.com</a>
             Phone Number: <span>410-622-6809</span>
         </p>
     </footer>
     <script type="module" src="./JavaScript/home.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
