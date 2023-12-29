@@ -79,8 +79,29 @@ const tags = [
     '#Sequelize',
     '#Express',
     '#Self-Teaching',
-    '#Bootcamp'];
-const [html, css, js, node, sql, jQuery, bootstrap, java, xml, groovy, sequelize, express, selfTeach, bootcamp] = tags;
+    '#Bootcamp',
+    '#Python',
+    '#Tech Enhancement/Empowerment'
+];
+
+const [
+    html,
+    css,
+    js,
+    node,
+    sql,
+    jQuery,
+    bootstrap,
+    java,
+    xml,
+    groovy,
+    sequelize,
+    express,
+    selfTeach,
+    bootcamp,
+    py,
+    techEnhancement
+] = tags;
 
 
 // Project Titles
@@ -103,9 +124,13 @@ title.enqueue('Store Design');
 title.enqueue('Blog Design');
 title.enqueue('Portfolio Project');
 title.enqueue('MedShareNetwork');
-title.enqueue('Coming Soon');
-title.enqueue('Coming Soon');
-title.enqueue('Coming Soon');
+title.enqueue('AI & Neural Network Practice');
+title.enqueue('Employee Tracker');
+title.enqueue('Computer Repairs');
+title.enqueue('iPhone Repairs');
+title.enqueue('Tech Upgrades');
+title.enqueue('Game Console and Conroller Repairs');
+title.enqueue('Asymptotic Analysis Practice');
 title.enqueue('Android Login App with Google Sign In');
 
 
@@ -129,9 +154,13 @@ hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${sequelize} ${express} ${bootcamp}`);
-hashTags.enqueue(``);
-hashTags.enqueue(``);
-hashTags.enqueue(``);
+hashTags.enqueue(`${py} ${selfTeach}`);
+hashTags.enqueue(`${node} ${sql} ${js} ${bootcamp}`);
+hashTags.enqueue(`${techEnhancement} ${selfTeach}`);
+hashTags.enqueue(`${techEnhancement} ${selfTeach}`);
+hashTags.enqueue(`${techEnhancement} ${selfTeach}`);
+hashTags.enqueue(`${techEnhancement} ${selfTeach}`);
+hashTags.enqueue(`${selfTeach}`);
 hashTags.enqueue(`${java} ${xml} ${groovy} ${selfTeach}`);
 
 
@@ -158,6 +187,10 @@ image.enqueue('./IMG/MedShareNetwork.webp');
 image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Android_Login_Page.webp');
 
 
@@ -181,11 +214,14 @@ url.enqueue('https://batking74.github.io/Store-Design/');
 url.enqueue('https://batking74.github.io/Blog-Design/');
 url.enqueue('https://batking74.github.io/Portfolio-Project/');
 url.enqueue('https://medsharenetwork-3691a9c0e268.herokuapp.com/');
+url.enqueue('https://www.youtube.com/watch?v=zYSN61cPPzE');
+url.enqueue('https://www.youtube.com/watch?v=4ukkirWouOk');
+url.enqueue('https://www.youtube.com/playlist?list=PL8SUnm_PCDCtN80TtylCqd3nB1_PgR_Qf');
+url.enqueue('https://www.youtube.com/playlist?list=PL8SUnm_PCDCvIINRmyDb6kS9K7IC79TrN');
+url.enqueue('https://www.youtube.com/playlist?list=PL8SUnm_PCDCud_oaYtkBkBf0rJi6TViiS');
+url.enqueue('https://www.youtube.com/playlist?list=PL8SUnm_PCDCt4IdY3Y2Kjl-F6wOHa_R1K');
+url.enqueue('https://www.youtube.com/watch?v=9-j1p-Stz3c&t=6s');
 url.enqueue('');
-url.enqueue('');
-url.enqueue('');
-url.enqueue('');
-projectsComingSoon(0);
 
 const productList = new Queue();
 
@@ -232,15 +268,4 @@ function displayProjects(project) {
             </div>
         </a>
     `;
-}
-
-
-// Displays the Number of Projects I got comming soon
-function projectsComingSoon(num) {
-    for(let i = 0; i < num; i++) {
-        title.enqueue(placeHolder[0]);
-        hashTags.enqueue(placeHolder[1]);
-        image.enqueue(placeHolder[2]);
-        url.enqueue(placeHolder[3]);
-    }
 }
