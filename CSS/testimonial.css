@@ -210,7 +210,7 @@ ul { list-style: none; }
 
 
 /* Responsive Web Design */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 843px) {
     /* Positioning Elements in wrapper */
     .wrapper {
         flex-direction: row;

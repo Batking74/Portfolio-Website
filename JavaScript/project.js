@@ -77,11 +77,10 @@ const tags = [
     '#XML',
     '#Groovy',
     '#Sequelize',
-    '#Express',
     '#Self-Teaching',
     '#Bootcamp',
     '#Python',
-    '#Tech Enhancement/Empowerment'
+    '#Tech Enhancement'
 ];
 
 const [
@@ -96,7 +95,6 @@ const [
     xml,
     groovy,
     sequelize,
-    express,
     selfTeach,
     bootcamp,
     py,
@@ -129,7 +127,7 @@ title.enqueue('Employee Tracker');
 title.enqueue('Computer Repairs');
 title.enqueue('iPhone Repairs');
 title.enqueue('Tech Upgrades');
-title.enqueue('Game Console and Conroller Repairs');
+title.enqueue('Console/Controller Repairs');
 title.enqueue('Asymptotic Analysis Practice');
 title.enqueue('Android Login App with Google Sign In');
 
@@ -153,7 +151,7 @@ hashTags.enqueue(`${html} ${css} ${js} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
-hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${sequelize} ${express} ${bootcamp}`);
+hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${sequelize} ${bootcamp}`);
 hashTags.enqueue(`${py} ${selfTeach}`);
 hashTags.enqueue(`${node} ${sql} ${js} ${bootcamp}`);
 hashTags.enqueue(`${techEnhancement} ${selfTeach}`);
@@ -185,7 +183,7 @@ image.enqueue('./IMG/Blog-Design-Project.webp');
 image.enqueue('./IMG/Naz_Portfolio_Project_Screenshot.webp');
 image.enqueue('./IMG/MedShareNetwork.webp');
 image.enqueue('./IMG/Placeholder.webp');
-image.enqueue('./IMG/Placeholder.webp');
+image.enqueue('./IMG/Employee-Tracker - 12_14_2023.webp');
 image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Placeholder.webp');

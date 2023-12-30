@@ -60,7 +60,8 @@ backgroundBtn.addEventListener('click', () => {
     document.body.classList.toggle('changeBackgroundColor');
     navigation.classList.toggle('changeNavColorByToggle');
     footer.classList.toggle('footerBackgroundColorToggle');
-    uniqueText.classList.toggle('highlight-Toggle');
+    footer.children[1].style.color = '#fff';
+    for(let element of uniqueText) element.classList.toggle('changeTextColor');
 })
 
 
