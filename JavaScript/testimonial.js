@@ -34,7 +34,7 @@ class CollaboratorTestimonial extends Testimonial {
     }
 }
 
-const testimonial2 = new CollaboratorTestimonial('Team Lead', 'Zach', 'Nazir has grown as a coworker since the time I’ve been a manager at work. He as excelled at tasks that have been presented to him. His ingenuity to help others at work has shown and has been taken noticed by other leaders in the building as well.', '../IMG/Target_Team_Lead_Zach.webp', steakholders[0], 'Team Leader at Target Corporation (Manager)');
+const testimonial2 = new CollaboratorTestimonial('Team Lead', 'Zach', 'Nazir has grown as a coworker since the time I’ve been a manager at work. He as excelled at tasks that have been presented to him. His ingenuity to help others at work has shown and has been taken noticed by other leaders in the building as well.', './IMG/Target_Team_Lead_Zach.webp', steakholders[0], 'Team Leader at Target Corporation (Manager)');
 
 testimonialsList[0] = testimonial2;
 
