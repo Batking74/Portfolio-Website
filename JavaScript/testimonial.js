@@ -2,15 +2,13 @@
 const testimonialsContainer = document.querySelector('.testimonials-append-container');
 const filter = document.querySelectorAll('.testimonial-filter-btn');
 const steakholders = ['Collaborator', 'Client'];
-const services = ['WebDev', 'TechRepairing'];
-const testimonialsList = new Array(2);
+const testimonialsList = new Array(1);
 
 
 // Creating Testimonial Class
 class Testimonial {
-    constructor(firstName, lastName, message, image, serviceTag, steakholderTag) {
+    constructor(firstName, lastName, message, image, steakholderTag) {
         this.steakholderTag = steakholderTag;
-        this.serviceTag = serviceTag;
         this.firstName = firstName;
         this.lastName = lastName;
         this.message = message;
@@ -21,8 +19,8 @@ class Testimonial {
 
 // Creating Client Testimonial Class
 class ClientTestimonial extends Testimonial {
-    constructor(firstName, lastName, message, image, serviceTag, steakholderTag, serviceProvided) {
-        super(firstName, lastName, message, image, serviceTag, steakholderTag);
+    constructor(firstName, lastName, message, image, steakholderTag, serviceProvided) {
+        super(firstName, lastName, message, image, steakholderTag);
         this.serviceProvided = serviceProvided;
     }
 }
@@ -30,19 +28,15 @@ class ClientTestimonial extends Testimonial {
 
 // Creating Collaborator Testimonial Class
 class CollaboratorTestimonial extends Testimonial {
-    constructor(firstName, lastName, message, image, serviceTag, steakholderTag, profession) {
-        super(firstName, lastName, message, image, serviceTag, steakholderTag);
+    constructor(firstName, lastName, message, image, steakholderTag, profession) {
+        super(firstName, lastName, message, image, steakholderTag);
         this.profession = profession;
     }
 }
 
+const testimonial2 = new CollaboratorTestimonial('Team Lead', 'Zach', 'Nazir has grown as a coworker since the time I’ve been a manager at work. He as excelled at tasks that have been presented to him. His ingenuity to help others at work has shown and has been taken noticed by other leaders in the building as well.', '../IMG/Target_Team_Lead_Zach.webp', steakholders[0], 'Team Leader at Target Corporation (Manager)');
 
-const testimonial = new ClientTestimonial('Naz', 'Knucks', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.100 words Max', null, services[1], steakholders[1], 'Fixed my computer');
-
-const testimonial2 = new CollaboratorTestimonial('Bat', 'King', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.100 words Max', null, services[0], steakholders[0], 'Full Stack Web Developer');
-
-testimonialsList[0] = testimonial;
-testimonialsList[1] = testimonial2;
+testimonialsList[0] = testimonial2;
 
 
 // Displaying All Testimonials
@@ -65,10 +59,7 @@ filter.forEach(btn => {
 // Filters out projects based on the skill #
 function filterProjects(i, e) {
     const testimonial = testimonialsList[i];
-    if(testimonial.serviceTag.includes(e.target.id)) {
-        displayTestimonials(testimonial);
-    }
-    else if(testimonial.steakholderTag.includes(e.target.id)) {
+    if(testimonial.steakholderTag.includes(e.target.id)) {
         displayTestimonials(testimonial);
     }
     else if(e.target.id === 'all-testimonials') {
