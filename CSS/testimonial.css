@@ -131,6 +131,7 @@ ul { list-style: none; }
 /* Styling Closed Quotes */
 .message-container > p::after {
     content: close-quote;
+    top: 50px;
     right: 0;
 }
 
