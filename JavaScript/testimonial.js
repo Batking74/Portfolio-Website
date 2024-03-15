@@ -2,7 +2,7 @@
 const testimonialsContainer = document.querySelector('.testimonials-append-container');
 const filter = document.querySelectorAll('.testimonial-filter-btn');
 const steakholders = ['Collaborator', 'Client'];
-const testimonialsList = new Array(1);
+const testimonialsList = new Array(3);
 
 
 // Creating Testimonial Class
@@ -36,7 +36,13 @@ class CollaboratorTestimonial extends Testimonial {
 
 const testimonial1 = new CollaboratorTestimonial('Team Lead', 'Zach', 'Nazir has grown as a Team Member since the time I’ve been a manager at Target Corporation. He has excelled at tasks that have been presented to him. His ingenuity to help others at work has shown, and has been taken noticed by other leaders at Target.', './IMG/Target_Team_Lead_Zach.webp', steakholders[0], 'Team Leader at Target Corporation (Manager)');
 
+const testimonial2 = new CollaboratorTestimonial('Team Lead', 'Shawn', 'Coming Soon! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eligendi magni obcaecati quia. Provident quidem expedita distinctio nam numquam reprehenderit assumenda quasi dolores tenetur, quibusdam laboriosam, sint optio, aperiam corporis?', './IMG/Lion2.webp', steakholders[0], 'Team Leader at Target Corporation (Manager)');
+
+const testimonial3 = new CollaboratorTestimonial('ETL', 'Ashley', 'Coming Soon! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eligendi magni obcaecati quia. Provident quidem expedita distinctio nam numquam reprehenderit assumenda quasi dolores tenetur, quibusdam laboriosam, sint optio, aperiam corporis?', './IMG/Lion2.webp', steakholders[0], 'Executive Team Leader at Target Corporation (Manager)');
+
 testimonialsList[0] = testimonial1;
+testimonialsList[1] = testimonial2;
+testimonialsList[2] = testimonial3;
 
 
 // Displaying All Testimonials
