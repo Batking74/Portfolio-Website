@@ -1,4 +1,5 @@
 // Importing Modules
+import '../JavaScript/skills.js';
 import '../JavaScript/project.js';
 import '../JavaScript/testimonial.js';
 

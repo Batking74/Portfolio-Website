@@ -566,19 +566,9 @@ body {
     transform: translateY(10%);
 }
 
-
-
-
-
-
-
-
-
-
 /* Footer */
 .footer {
     width: 100%;
-    height: 150px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -594,26 +584,12 @@ body {
     column-gap: 40px;
 }
 
-.footer p {
-    background-color: #000;
-    font-size: 15px;
-    padding: 10px 0 10px 0;
-}
-
-/* Styling my Contact info */
-.footer p span, .footer p a {
-    color: #ca1919;
-}
 
 .footer div img {
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: #fff;
     border-radius: 50px;
     max-width: 50px;
-}
-
-.footer div a {
-    text-decoration: none;
 }
 
 

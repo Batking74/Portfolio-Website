@@ -80,7 +80,13 @@ const tags = [
     '#Self-Teaching',
     '#Bootcamp',
     '#Python',
-    '#Tech Enhancement'
+    '#Tech Enhancement',
+    '#WebPack',
+    '#IndexDB',
+    '#GraphQL',
+    '#PWA',
+    '#React',
+    '#MERN Stack'
 ];
 
 const [
@@ -98,7 +104,13 @@ const [
     selfTeach,
     bootcamp,
     py,
-    techEnhancement
+    techEnhancement,
+    webpack,
+    indexDB,
+    graphql,
+    pwa,
+    react,
+    mern
 ] = tags;
 
 
@@ -122,6 +134,11 @@ title.enqueue('Store Design');
 title.enqueue('Blog Design');
 title.enqueue('Portfolio Project');
 title.enqueue('MedShareNetwork');
+title.enqueue('AI Integration chatGPT');
+title.enqueue('Notes App');
+title.enqueue('Tech Blog');
+title.enqueue('PWA Text Editor');
+title.enqueue('Portfolio Project');
 title.enqueue('AI & Neural Network Practice');
 title.enqueue('Employee Tracker');
 title.enqueue('Computer Repairs');
@@ -152,6 +169,11 @@ hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${bootcamp}`);
 hashTags.enqueue(`${html} ${css} ${js} ${node} ${sql} ${sequelize} ${bootcamp}`);
+hashTags.enqueue(`${js} ${node} ${selfTeach}`);
+hashTags.enqueue(` ${html} ${css} ${js} ${node} ${bootcamp}`);
+hashTags.enqueue(` ${html} ${css} ${js} ${node} ${sequelize} ${bootcamp}`);
+hashTags.enqueue(` ${html} ${css} ${js} ${node} ${webpack} ${pwa} ${indexDB} ${bootcamp}`);
+hashTags.enqueue(` ${html} ${css} ${js} ${react} ${bootcamp}`);
 hashTags.enqueue(`${py} ${selfTeach}`);
 hashTags.enqueue(`${node} ${sql} ${js} ${bootcamp}`);
 hashTags.enqueue(`${techEnhancement} ${selfTeach}`);
@@ -182,6 +204,11 @@ image.enqueue('./IMG/Store-Design-Project.webp');
 image.enqueue('./IMG/Blog-Design-Project.webp');
 image.enqueue('./IMG/Naz_Portfolio_Project_Screenshot.webp');
 image.enqueue('./IMG/MedShareNetwork.webp');
+image.enqueue('./IMG/AI-Applications-and-Prompt-Engineering -11_29_2023.png');
+image.enqueue('./IMG/Nazirs-Note-Taker-Project.webp');
+image.enqueue('./IMG/Tech Blog - 2_16_2024.webp');
+image.enqueue('./IMG/J.A.T.E - 2_16_2024.webp');
+image.enqueue('./IMG/Naz Portfolio - 2_22_2024.webp');
 image.enqueue('./IMG/Placeholder.webp');
 image.enqueue('./IMG/Employee-Tracker - 12_14_2023.webp');
 image.enqueue('./IMG/Placeholder.webp');
@@ -212,6 +239,11 @@ url.enqueue('https://batking74.github.io/Store-Design/');
 url.enqueue('https://batking74.github.io/Blog-Design/');
 url.enqueue('https://batking74.github.io/Portfolio-Project/');
 url.enqueue('https://medsharenetwork-3691a9c0e268.herokuapp.com/');
+url.enqueue('https://www.youtube.com/watch?v=zXzFo15bS5Q');
+url.enqueue('https://nazirs-notes-c5bd0256a734.herokuapp.com/');
+url.enqueue('https://naz-tech-blog-b1b13db75bbc.herokuapp.com/Home');
+url.enqueue('https://pwa-texteditor-fqe6.onrender.com/');
+url.enqueue('https://bootcampportfolio.netlify.app/');
 url.enqueue('https://www.youtube.com/watch?v=zYSN61cPPzE');
 url.enqueue('https://www.youtube.com/watch?v=4ukkirWouOk');
 url.enqueue('https://www.youtube.com/playlist?list=PL8SUnm_PCDCtN80TtylCqd3nB1_PgR_Qf');
