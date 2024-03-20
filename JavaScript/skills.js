@@ -46,6 +46,12 @@ const skills = [
         isInTechArsenal: true
     },
     {
+        Skill: 'Agile Development Methodology',
+        BackgroundColor: '#3bbd0c',
+        SkillSize: 15,
+        isInTechArsenal: true
+    },
+    {
         Skill: 'React',
         BackgroundColor: '#0c35bd',
         SkillSize: null,
@@ -178,10 +184,10 @@ const skills = [
         isInTechArsenal: false
     },
     {
-        Skill: 'Sass',
+        Skill: 'Sass/Scss',
         BackgroundColor: '#ec0eb8',
-        SkillSize: null,
-        isInTechArsenal: false
+        SkillSize: 20,
+        isInTechArsenal: true
     },
     {
         Skill: 'iOS Development',
@@ -214,8 +220,20 @@ const skills = [
         isInTechArsenal: false
     },
     {
+        Skill: 'Flask',
+        BackgroundColor: '#BFE011',
+        SkillSize: null,
+        isInTechArsenal: false
+    },
+    {
+        Skill: 'Django',
+        BackgroundColor: '#41BF0B',
+        SkillSize: null,
+        isInTechArsenal: false
+    },
+    {
         Skill: 'Soldering',
-        BackgroundColor: '#00e200',
+        BackgroundColor: '#D515B2',
         SkillSize: null,
         isInTechArsenal: false
     },
