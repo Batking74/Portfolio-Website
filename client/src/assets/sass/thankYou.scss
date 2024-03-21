@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(90deg, #000000, #ff0000db, #000000);
+}
+
+main {
+    margin-top: 140px;
+    background: #000000d3;
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+    color: #f2f2f2;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sub {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.p {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+a {
+    color: #c81010;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    .sub {
+        font-size: 18px;
+    }
+    
+    .p {
+        font-size: 14px;
+    }
+    
+}
