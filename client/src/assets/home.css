@@ -11,7 +11,7 @@ html {
 body {
   width: 100%;
   position: relative;
-  background: linear-gradient(90deg, #000, #0d0ddf, #000);
+  background: linear-gradient(90deg, #000000, #8f1616, #000000);
   color: #e1dad5;
   font-family: "roboto", sans-serif;
 }
@@ -133,7 +133,8 @@ body {
 }
 
 /* Profession */
-.profession::before, .profession::after {
+.profession::before,
+.profession::after {
   content: "";
   position: absolute;
   background: #e3e3e3;
@@ -178,7 +179,8 @@ body {
 }
 
 /* Styling Home Buttons */
-.btn, #resumeBtn {
+.btn,
+#resumeBtn {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 25px;
@@ -190,7 +192,10 @@ body {
 }
 
 /* Home Buttons */
-.btn:hover, .btn:focus, #resumeBtn:hover, #resumeBtn:focus {
+.btn:hover,
+.btn:focus,
+#resumeBtn:hover,
+#resumeBtn:focus {
   transform: scale(1.1);
   transition-duration: 2s;
   cursor: pointer;
@@ -243,7 +248,8 @@ body {
 }
 
 /* Image column and About Me Text Column */
-.left-col, .right-col {
+.left-col,
+.right-col {
   position: relative;
 }
 
@@ -309,13 +315,15 @@ body {
   line-height: 200px;
 }
 
-.skill-card:hover, .skill-card:active {
+.skill-card:hover,
+.skill-card:active {
   background: var(--bg);
   transform: scale(1.1);
   transform: translateY(-15px);
 }
 
-.skill-card:hover .skill, .skill-card:active .skill {
+.skill-card:hover .skill,
+.skill-card:active .skill {
   color: #fff;
 }
 
@@ -334,7 +342,8 @@ body {
   text-align: center;
 }
 
-.project-filter-btn, .testimonial-filter-btn {
+.project-filter-btn,
+.testimonial-filter-btn {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -344,12 +353,14 @@ body {
   transition: 1s;
 }
 
-.project-filter-btn:hover, .testimonial-filter-btn:hover {
+.project-filter-btn:hover,
+.testimonial-filter-btn:hover {
   transform: scale(1.1);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.4039215686), #887e14, rgba(0, 0, 0, 0.4039215686));
 }
 
-.project-filter-btn.active, .testimonial-filter-btn.active {
+.project-filter-btn.active,
+.testimonial-filter-btn.active {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.368627451), #887e14, rgba(0, 0, 0, 0.368627451));
   color: #fff;
 }
@@ -370,7 +381,8 @@ body {
   transition: 1s;
 }
 
-.project-card:hover, .project-card:active {
+.project-card:hover,
+.project-card:active {
   transform: translateY(-5%);
   transition: 0.5s;
 }
@@ -437,7 +449,8 @@ body {
   position: relative;
 }
 
-.contact-form input, .message {
+.contact-form input,
+.message {
   width: 100%;
   display: block;
   height: 50px;
@@ -513,7 +526,7 @@ body {
 
 /* Toggle Background Colors on click */
 .changeBackgroundColor {
-  background: linear-gradient(90deg, #000000, #8f1616, #000000);
+  background: linear-gradient(90deg, #000, #0d0ddf, #000);
 }
 
 /* Navigation Color Toggle */
@@ -529,7 +542,8 @@ body {
 
 /* Text Color Toggle */
 .changeTextColor {
-  background: linear-gradient(red, yellow, red); /* Adjust colors as needed */
+  background: linear-gradient(red, yellow, red);
+  /* Adjust colors as needed */
   -webkit-background-clip: text;
   color: transparent;
 }

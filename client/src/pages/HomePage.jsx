@@ -9,11 +9,16 @@ import HomeComponent from "../components/HomeComponent";
 import Navigation from "../components/Navigation";
 import React from "react";
 
+// Stylesheets
+import '../assets/home.css';
+import '../assets/testimonials.css';
+
 export default function HomePage() {
 
     return (
         <>
             <Navigation />
+            
             {/* Start of Main Content */}
             <main>
                 {/* Start of Home Section */}
@@ -68,4 +73,3 @@ export default function HomePage() {
         </>
     );
 }
-

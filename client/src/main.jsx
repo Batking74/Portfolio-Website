@@ -6,11 +6,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import React from 'react';
 
-// Importing Stylesheets
-import './assets/sass/home.css';
-import './assets/sass/testimonials.css';
-import './assets/sass/thankYou.css';
-
 const router = createBrowserRouter([{
   path: '/',
   element: <App />,

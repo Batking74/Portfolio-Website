@@ -13,9 +13,11 @@ export default function CertificateComponent() {
             <div className="certificate-container">
 
                 {/* Prompt Engineering Certificate */}
-                <a href="./Assets/Nazirs_edX_Prompt_Engineering_Certificate.pdf" className="project-card">
+                <a
+                    href="/images/credentials/Nazir_Knuckles_Portfolio_Resume.pdf" className="project-card">
                     <img
-                        loading="lazy" src="./IMG/Nazirs_edX_Prompt_Engineering_Certificate.webp"
+                        loading="lazy"
+                        src="/images/credentials/Nazirs_edX_Prompt_Engineering_Certificate.webp"
                         alt="Nazirs edX Prompt Engineering Certificate" />
                     <div className="content">
                         <p className="certificate-description">
@@ -25,6 +27,6 @@ export default function CertificateComponent() {
                     </div>
                 </a>
             </div>
-        </section>
+        </section >
     );
 }

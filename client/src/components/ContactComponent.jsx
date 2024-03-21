@@ -28,5 +28,5 @@ export default function ContactComponent() {
                 </div>
             </form>
         </section>
-    )
+    );
 }

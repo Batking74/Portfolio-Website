@@ -1,7 +1,35 @@
 // Importing Modules/Packages
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function HomeComponent() {
+    const [time, setTime] = useState(300);
+
+    // Toggle Background
+    const toggleBackgroundColor = () => {
+        const footer = document.querySelector('#footerBackgroundColorToggle');
+        const uniqueText = document.querySelectorAll(".highlight-Toggle");
+        const [body] = document.getElementsByTagName('body');
+        const nav = document.querySelector('.navbar');
+        body.classList.toggle('changeBackgroundColor');
+        nav.classList.toggle('changeNavColorByToggle');
+        footer.classList.toggle('footerBackgroundColorToggle');
+        for (let { classList } of uniqueText) classList.toggle('changeTextColor');
+    }
+
+    // Countdown Timer
+    useEffect(() => {
+        const timer = setInterval(() => {
+            if (time != 0) setTime(prev => prev - 1);
+            else {
+                clearInterval(timer);
+                // Do Something when timer is done
+            }
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [time]);
+
+
     return (
         <section className="home">
             <div className="home-content">
@@ -9,15 +37,22 @@ export default function HomeComponent() {
                 <p className="profession">Web Developer</p>
                 <p className="info">
                     Devoted Web Developer on a mission to transform new ideas into digital experiences!
-                    <strong id="Countdown-Text">You have <span id="countdown">300</span> seconds left!</strong>
+                    <strong id="Countdown-Text">You have <span id="countdown">{time}</span> seconds left!</strong>
                 </p>
-                <button id="background-Toggle" className="btn">Background</button>
+                <button
+                    onClick={toggleBackgroundColor}
+                    id="background-Toggle"
+                    className="btn">Background</button>
 
-                {/* Working on this feature! */}
-                <button id="resumeBtn">Resume</button>
+                {/* Resume Button */}
+                <button
+                    onClick={() => {
+                        window.open('/images/credentials/Nazir_Knuckles_Portfolio_Resume.pdf', '_blank');
+                    }}
+                    id="resumeBtn">Resume</button>
             </div>
             <img
-                src="./IMG/14_year_old_naz.webp"
+                src="/images/people/14_year_old_naz.webp"
                 loading="lazy"
                 className="image"
                 alt="Nazir Knuckles at age 14 with high-top fade." />
