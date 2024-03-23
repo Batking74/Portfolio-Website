@@ -5,6 +5,7 @@ export default function Navigation() {
         for (let { children } of parentElement.parentElement.children) {
 
             // Grabbing each classList from 'a' links to see which one was active, and removing the active class
+            // Fix Time Complexity
             for (let { classList } of children) {
                 if (classList[1] === 'active') classList.remove('active');
             }

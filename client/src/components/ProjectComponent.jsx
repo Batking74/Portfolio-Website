@@ -1,10 +1,8 @@
 // Importing Modules/Packages
+import FilterProjectButtons from "./UI/FilterProjectButtons";
 import Projects from "./UI/Projects";
-import React, { createElement, useState } from "react";
-
+import { useState } from "react";
 const path = '/images/projects';
-const f = document.createElement('button');
-// f.classList.remove()
 
 // Filter Tags
 const tags = [
@@ -57,19 +55,6 @@ const [
 
 export default function ProjectComponent() {
     const [DisplayedProjects, showNewProjects] = useState('all-projects');
-    const filter = ({ id, parentElement, classList }) => {
-
-        // Displaying Projects that only contains the id/Tag
-        showNewProjects(id);
-
-        // Grabbing each elements classList to see which one was active, and removing the active class
-        for (let { classList } of parentElement.children) {
-            if (classList[1] === 'active') classList.remove('active');
-        }
-
-        // Adding the active class to the btn the user clicked on to filter
-        classList.add('active');
-    }
 
     return (
         <section className="project" id="project-section">
@@ -79,23 +64,26 @@ export default function ProjectComponent() {
             </p>
             <div className="seperator"></div>
             <div className="filters">
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn active" id="all-projects">all</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="JS">JavaScript</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Bootstrap">Bootstrap</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Java">Java</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="React">React</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Python">Python</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="SQL">SQL</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Node.js">Node.js</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="MongoDB">MongoDB</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Self-Teaching">Self Teaching</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Bootcamp">Bootcamp</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="Tech Enhancement">Tech Repairs and Upgrades</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="PWA">PWA</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="WebPack">WebPack</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="GraphQL">GraphQL</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="IndexDB">IndexDB</button>
-                <button onClick={({ target }) => filter(target)} className="project-filter-btn" id="MERN Stack">MERN Stack</button>
+                <FilterProjectButtons showNewProjects={showNewProjects} filters={[
+                    { Name: 'All', id: 'all-projects' },
+                    { Name: 'JavaScript', id: 'JS' },
+                    { Name: 'Bootstrap', id: 'Bootstrap' },
+                    { Name: 'Java', id: 'Java' },
+                    { Name: 'React', id: 'React' },
+                    { Name: 'Python', id: 'Python' },
+                    { Name: 'SQL', id: 'SQL' },
+                    { Name: 'Node.js', id: 'Node.js' },
+                    { Name: 'MongoDB', id: 'MongoDB' },
+                    { Name: 'Python', id: 'Python' },
+                    { Name: 'Self Teaching', id: 'Self-Teaching' },
+                    { Name: 'Bootcamp', id: 'Bootcamp' },
+                    { Name: 'Tech Repairs and Upgrades', id: 'Tech Enhancement' },
+                    { Name: 'PWA', id: 'PWA' },
+                    { Name: 'WebPack', id: 'WebPack' },
+                    { Name: 'GraphQL', id: 'GraphQL' },
+                    { Name: 'IndexDB', id: 'IndexDB' },
+                    { Name: 'MERN Stack', id: 'MERN Stack' },
+                ]} />
             </div>
             <div className="project-container">
                 <Projects DisplayedProjects={DisplayedProjects} projects={[
@@ -131,7 +119,7 @@ export default function ProjectComponent() {
                     },
                     {
                         Name: 'Meal Discovery',
-                        HashTags: `${html} ${css} ${js} ${jQuery} ${bootstrap}`,
+                        HashTags: `${html} ${css} ${js} ${jQuery} ${bootstrap} ${bootcamp}`,
                         Image: `${path}/Meal_Discovery_Project.webp`,
                         url: 'https://mrwait-music.github.io/super-group-project/'
                     },
@@ -274,10 +262,10 @@ export default function ProjectComponent() {
                         url: 'https://www.youtube.com/playlist?list=PL8SUnm_PCDCt4IdY3Y2Kjl-F6wOHa_R1K'
                     },
                     {
-                        Name: 'Asymptotic Analysis Practice',
+                        Name: 'Asymptotic Analysis',
                         HashTags: `${selfTeach}`,
                         Image: `${path}/Placeholder.webp`,
-                        url: 'https://www.youtube.com/watch?v=9-j1p-Stz3c&t=6s'
+                        url: 'https://www.youtube.com/playlist?list=PL8SUnm_PCDCtEVJPFnKED0wqaYC81W02i'
                     },
                     {
                         Name: 'Android Login App with Google Sign In',

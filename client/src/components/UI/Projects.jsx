@@ -1,7 +1,3 @@
-// Importing Modules/Packages
-import React from "react";
-
-
 export default function Projects({ projects, DisplayedProjects }) {
 
     return projects.map(({ Name, HashTags, Image, url }, i) => {

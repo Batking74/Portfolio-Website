@@ -1,7 +1,3 @@
-// Importing Modules/Packages
-import React from "react";
-
-
 export default function CertificateComponent() {
     return (
         <section className="project" id="certificate-section">

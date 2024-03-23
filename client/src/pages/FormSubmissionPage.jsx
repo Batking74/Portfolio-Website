@@ -1,6 +1,4 @@
 // Importing Modules/Packages
-import React from "react";
-
 import '../assets/testimonials.css';
 
 

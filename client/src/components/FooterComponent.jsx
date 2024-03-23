@@ -1,6 +1,3 @@
-// Importing Modules/Packages
-import React from "react";
-
 export default function FooterComponent() {
     return (
         <footer id="footerBackgroundColorToggle" className="footer">

@@ -1,5 +1,5 @@
 // Importing Modules/Packages
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function HomeComponent() {
     const [time, setTime] = useState(300);
