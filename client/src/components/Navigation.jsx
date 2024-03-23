@@ -1,5 +1,5 @@
 export default function Navigation() {
-
+    
     const toggleLink = ({ parentElement, classList }) => {
         // Grabbing each nav links children
         for (let { children } of parentElement.parentElement.children) {
@@ -15,7 +15,6 @@ export default function Navigation() {
         classList.add('active');
     }
 
-
     // Toggle Navbar
     const toggleNavBar = ({ classList }) => {
         const linkContainer = document.querySelector('.links-container');
@@ -23,11 +22,25 @@ export default function Navigation() {
         classList.toggle('active');
     }
 
+    // Nav Links
+    const links = [
+        { LinkName: 'Home', Href: '#' },
+        { LinkName: 'About', Href: '#about-section' },
+        { LinkName: 'Skills', Href: '#skill-section' },
+        { LinkName: 'Projects', Href: '#project-section' },
+        { LinkName: 'Testimonials', Href: '#Testimonials-Section' },
+        { LinkName: 'Certificates', Href: '#certificate-section' },
+        { LinkName: 'Contact', Href: '#contact-section' }
+    ];
+
     return (
         <>
             {/* Start of Navigation */}
             <nav className="navbar">
-                <h1 className="brand">Batking</h1>
+                <span className="brand-container">
+                    <h1 className="brand">Batking</h1>
+                    <img src="/images/others/logo.svg" className="App-logo" alt="React logo" />
+                </span>
                 <div
                     onClick={({ target }) => toggleNavBar(target)}
                     className="toggle-btn">
@@ -35,13 +48,15 @@ export default function Navigation() {
                     <span></span>
                 </div>
                 <ul className="links-container">
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#" className="link active">Home</a></li>
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#about-section" className="link">About</a></li>
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#skill-section" className="link">Skills</a></li>
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#project-section" className="link">Projects</a></li>
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#Testimonials-Section" className="link">Testimonials</a></li>
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#certificate-section" className="link">Certificates</a></li>
-                    <li onClick={({ target }) => toggleLink(target)} className="links-item"><a href="#contact-section" className="link">Contact</a></li>
+                    {links.map(({ LinkName, Href }, i) => {
+                        let classes = 'link';
+                        if (Href === '#') classes += ' active';
+                        return (
+                            <li key={i + 1} onClick={({ target }) => toggleLink(target)} className="links-item">
+                                <a href={Href} className={classes}>{LinkName}</a>
+                            </li>
+                        );
+                    })}
                 </ul>
                 <div id="validationError" className="validationError"></div>
             </nav>

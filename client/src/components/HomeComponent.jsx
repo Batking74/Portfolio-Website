@@ -37,7 +37,7 @@ export default function HomeComponent() {
                 <p className="profession">Web Developer</p>
                 <p className="info">
                     Devoted Web Developer on a mission to transform new ideas into digital experiences!
-                    <strong id="Countdown-Text">You have <span id="countdown">{time}</span> seconds left!</strong>
+                    <strong id="Countdown-Text"> You have <span id="countdown">{time}</span> seconds left!</strong>
                 </p>
                 <button
                     onClick={toggleBackgroundColor}
@@ -51,11 +51,18 @@ export default function HomeComponent() {
                     }}
                     id="resumeBtn">Resume</button>
             </div>
-            <img
-                src="/images/people/14_year_old_naz.webp"
-                loading="lazy"
-                className="image"
-                alt="Nazir Knuckles at age 14 with high-top fade." />
+            <span>
+                <img
+                    onClick={() => {
+                        document.querySelector('.home-img-caption').classList.add('imgCap1-style');
+                        document.querySelector('.home-img-caption').textContent = 'Me 14 years old (Freshmen Year)'
+                    }}
+                    src="/images/people/14_year_old_naz.webp"
+                    loading="lazy"
+                    className="image"
+                    alt="Nazir Knuckles at age 14 with high-top fade." />
+                <p className='home-img-caption'></p>
+            </span>
         </section>
     );
 }

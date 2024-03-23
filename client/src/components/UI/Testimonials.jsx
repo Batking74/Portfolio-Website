@@ -30,7 +30,7 @@ export default function Testimonials({ testimonials, Swiper }) {
                     <div className="message-container">
                         <p>{Testimonial}</p>
                         <div className="PartnerDescription-Container">
-                            <h4>{`${Firstname} ${LastName}`}</h4>
+                            <h3>{`${Firstname} ${LastName}`}</h3>
                             <p>{`${Relationship}: ${Profession}`}</p>
                         </div>
                     </div>

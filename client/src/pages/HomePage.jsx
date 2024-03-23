@@ -1,4 +1,4 @@
-// Importing Modules/Packages
+// Importing Modules
 import TestimonialComponent from "../components/TestimonialComponent";
 import CertificateComponent from "../components/CertificateComponent";
 import ContactComponent from "../components/ContactComponent";

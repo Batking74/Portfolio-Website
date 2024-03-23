@@ -31,11 +31,17 @@ body {
   z-index: 9;
 }
 
+.brand-container {
+  display: flex;
+  align-items: center;
+}
+
 /* My Brand Name */
 .brand {
   text-transform: capitalize;
   font-weight: 500;
   color: #e1dad5;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Navigation Link Container */
@@ -162,6 +168,26 @@ body {
   max-width: 400px;
 }
 
+.home-img-caption {
+  position: relative;
+  left: 80px;
+  z-index: -1;
+  font-family: cursive;
+  bottom: 220px;
+}
+
+.imgCap1-style {
+  transition: 1s;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: rgba(218, 205, 21, 0.7254901961);
+  font-size: 15px;
+  top: 20px;
+  color: black;
+  border-radius: 30px;
+  padding: 15px;
+}
+
 /* Home Description */
 .info {
   line-height: 30px;
@@ -251,6 +277,13 @@ body {
 .left-col,
 .right-col {
   position: relative;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
 }
 
 /* Fun little message */
@@ -548,6 +581,32 @@ body {
   color: transparent;
 }
 
+.App-logo {
+  width: 60px;
+}
+
+.App-logo::-moz-selection, .App-logo2::-moz-selection {
+  display: none;
+}
+
+.App-logo::selection,
+.App-logo2::selection {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Resizing Project Names and Tags */
 @media (max-width: 1264px) {
   .project-name {
@@ -558,9 +617,15 @@ body {
   }
 }
 /* tablet view */
-@media (max-width: 996px) {
+@media (max-width: 1055px) {
   html {
     font-size: 14px;
+  }
+  .home-img-caption {
+    left: 60px;
+  }
+  .imgCap1-style {
+    top: -10px;
   }
   /* Toggle btn */
   .toggle-btn {

@@ -2,10 +2,6 @@
 import Skills from "./UI/Skills";
 
 export default function SkillsComponent() {
-    const skillContainers = document.querySelectorAll('.skill-container');
-
-
-
     const skills = [
         {
             Skill: 'HTML',
@@ -272,37 +268,6 @@ export default function SkillsComponent() {
             isInTechArsenal: false
         },
     ];
-
-
-    // for (let { Skill, BackgroundColor, SkillSize, isInTechArsenal } of skills) {
-    //     appendSkillsToHTML(Skill, BackgroundColor, isInTechArsenal, SkillSize);
-    // }
-
-    // function appendSkillsToHTML(skill, backgroundColor, isInTechArsenal, skillFontSize) {
-    //     if (isInTechArsenal) {
-    //         displaySkillsAt(0, skill, backgroundColor, skillFontSize);
-    //     }
-    //     else {
-    //         displaySkillsAt(1, skill, backgroundColor, skillFontSize);
-    //     }
-    // }
-
-    // function displaySkillsAt(index, skill, backgroundColor, skillFontSize) {
-    //     if (skillFontSize) {
-    //         skillContainers[index].innerHTML += `
-    //     <div class="skill-card" style="--bg: ${backgroundColor};">
-    //         <p class="skill" style="font-size: ${skillFontSize}px;">${skill}</p>
-    //     </div>
-    //     `
-    //     }
-    //     else {
-    //         skillContainers[index].innerHTML += `
-    //     <div class="skill-card" style="--bg: ${backgroundColor};">
-    //         <p class="skill">${skill}</p>
-    //     </div>
-    //     `
-    //     }
-    // }
     return (
         <section className="project" id="skill-section" >
             <h2 className="heading">

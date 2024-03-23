@@ -4,7 +4,7 @@ export default function ContactComponent() {
             <form id="form" action="./HTML/thankYou.html">
                 <h2 className="heading">Contact<span className="highlight highlight-Toggle"> me</span></h2>
                 <p className="sub-heading">
-                    I'm genuinely excited to provide support and empower visions. Feel free to contact me, and we'll navigate this journey together!
+                    I&apos;m genuinely excited to provide support and empower visions. Feel free to contact me, and we&apos;ll navigate this journey together!
                 </p>
                 <div className="seperator"></div>
                 <div className="contact-form">

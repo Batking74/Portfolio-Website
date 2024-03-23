@@ -74,7 +74,6 @@ export default function ProjectComponent() {
                     { Name: 'SQL', id: 'SQL' },
                     { Name: 'Node.js', id: 'Node.js' },
                     { Name: 'MongoDB', id: 'MongoDB' },
-                    { Name: 'Python', id: 'Python' },
                     { Name: 'Self Teaching', id: 'Self-Teaching' },
                     { Name: 'Bootcamp', id: 'Bootcamp' },
                     { Name: 'Tech Repairs and Upgrades', id: 'Tech Enhancement' },

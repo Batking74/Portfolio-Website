@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "cd client && vite",
-    "build": "cd client && vite build",
-    "preview": "cd client && vite preview"
+    "build": "cd client && vite build"
   },
   "dependencies": {
     "react": "^18.2.0",
