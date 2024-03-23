@@ -1,0 +1,65 @@
+export default function Navigation() {
+    
+    const toggleLink = ({ parentElement, classList }) => {
+        // Grabbing each nav links children
+        for (let { children } of parentElement.parentElement.children) {
+
+            // Grabbing each classList from 'a' links to see which one was active, and removing the active class
+            // Fix Time Complexity
+            for (let { classList } of children) {
+                if (classList[1] === 'active') classList.remove('active');
+            }
+        }
+
+        // Adding the active class to the link the user clicked on to filter
+        classList.add('active');
+    }
+
+    // Toggle Navbar
+    const toggleNavBar = ({ classList }) => {
+        const linkContainer = document.querySelector('.links-container');
+        linkContainer.classList.toggle('show');
+        classList.toggle('active');
+    }
+
+    // Nav Links
+    const links = [
+        { LinkName: 'Home', Href: '#' },
+        { LinkName: 'About', Href: '#about-section' },
+        { LinkName: 'Skills', Href: '#skill-section' },
+        { LinkName: 'Projects', Href: '#project-section' },
+        { LinkName: 'Testimonials', Href: '#Testimonials-Section' },
+        { LinkName: 'Certificates', Href: '#certificate-section' },
+        { LinkName: 'Contact', Href: '#contact-section' }
+    ];
+
+    return (
+        <>
+            {/* Start of Navigation */}
+            <nav className="navbar">
+                <span className="brand-container">
+                    <h1 className="brand">Batking</h1>
+                    <img src="/images/others/logo.svg" className="App-logo" alt="React logo" />
+                </span>
+                <div
+                    onClick={({ target }) => toggleNavBar(target)}
+                    className="toggle-btn">
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul className="links-container">
+                    {links.map(({ LinkName, Href }, i) => {
+                        let classes = 'link';
+                        if (Href === '#') classes += ' active';
+                        return (
+                            <li key={i + 1} onClick={({ target }) => toggleLink(target)} className="links-item">
+                                <a href={Href} className={classes}>{LinkName}</a>
+                            </li>
+                        );
+                    })}
+                </ul>
+                <div id="validationError" className="validationError"></div>
+            </nav>
+        </>
+    );
+}
