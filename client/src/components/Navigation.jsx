@@ -5,8 +5,9 @@ import { setActive } from "./utils/utils";
 export default function Navigation() {
 
     // Toggle Navbar
-    const toggleNavBar = ({ classList }) => {
+    const toggleNavBar = () => {
         const linkContainer = document.querySelector('.links-container');
+        const { classList } = document.querySelector('.toggle-btn');
         linkContainer.classList.toggle('show');
         classList.toggle('active');
     }
@@ -31,7 +32,7 @@ export default function Navigation() {
                     <img src="/images/others/logo.svg" className="App-logo" alt="React logo" />
                 </span>
                 <div
-                    onClick={({ target }) => toggleNavBar(target)}
+                    onClick={toggleNavBar}
                     className="toggle-btn">
                     <span></span>
                     <span></span>
