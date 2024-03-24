@@ -136,9 +136,6 @@ body {
 .home-content {
     width: 50%;
 }
-.home-content span {
-    height: fit-content;
-}
 
 
 /* Coloring all Targeted words/letters */
@@ -197,7 +194,6 @@ body {
     position: relative;
     left: 80px;
     z-index: -1;
-    font-family: cursive;
     bottom: 220px;
 }
 
@@ -803,7 +799,7 @@ body {
 
     .image {
         width: 300px;
-        height: fit-content;
+        height: 300px;
         margin: 40px;
     }
 

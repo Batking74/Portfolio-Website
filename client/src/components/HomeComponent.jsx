@@ -51,7 +51,7 @@ export default function HomeComponent() {
                     }}
                     id="resumeBtn">Resume</button>
             </div>
-            <span>
+            <span className="home-image">
                 <img
                     onClick={() => {
                         document.querySelector('.home-img-caption').classList.add('imgCap1-style');
