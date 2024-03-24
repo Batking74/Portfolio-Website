@@ -51,7 +51,7 @@ export default function HomeComponent() {
                     }}
                     id="resumeBtn">Resume</button>
             </div>
-            <span>
+            {/* <span> */}
                 <img
                     onClick={() => {
                         document.querySelector('.home-img-caption').classList.add('imgCap1-style');
@@ -61,8 +61,8 @@ export default function HomeComponent() {
                     loading="lazy"
                     className="image"
                     alt="Nazir Knuckles at age 14 with high-top fade." />
-                <p className='home-img-caption'></p>
-            </span>
+                {/* <p className='home-img-caption'></p> */}
+            {/* </span> */}
         </section>
     );
 }

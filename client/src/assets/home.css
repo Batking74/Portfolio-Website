@@ -166,7 +166,6 @@ body {
 /* Home Image of 14 year old Naz */
 .image {
   max-width: 400px;
-  height: 400px;
 }
 
 .home-img-caption {
@@ -686,7 +685,7 @@ body {
     padding-bottom: 50px;
   }
   .home .image {
-    max-width: 300px;
+    width: 300px;
     height: -moz-fit-content;
     height: fit-content;
     margin: 40px;
