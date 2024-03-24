@@ -4,11 +4,11 @@ import Projects from "./UI/Projects";
 import { useState } from "react";
 const path = '/images/projects';
 
-// Filter Tags
+// Filter Tags/Buttons
 const tags = [
     '#HTML',
     '#CSS',
-    '#JS',
+    '#JavaScript',
     '#Node.js',
     '#SQL',
     '#Jquery',
@@ -17,16 +17,17 @@ const tags = [
     '#XML',
     '#Groovy',
     '#Sequelize',
-    '#Self-Teaching',
+    '#Self Teaching',
     '#Bootcamp',
     '#Python',
-    '#Tech Enhancement',
+    '#Tech Repairs and Upgrades',
     '#WebPack',
     '#IndexDB',
     '#GraphQL',
     '#PWA',
     '#React',
-    '#MERN Stack'
+    '#MERN Stack',
+    '#MongoDB'
 ];
 
 const [
@@ -50,11 +51,17 @@ const [
     graphql,
     pwa,
     react,
-    mern
+    mern,
+    mongodb
 ] = tags;
 
 export default function ProjectComponent() {
-    const [DisplayedProjects, showNewProjects] = useState('all-projects');
+    const [DisplayedProjects, showNewProjects] = useState('All');
+    let filterBtns = [{ Name: 'All' }];
+    for(let i = 2; i < tags.length; i++) {
+        const technology = tags[i].replace('#', '');
+        filterBtns.push({ Name: technology});
+    }
 
     return (
         <section className="project" id="project-section">
@@ -64,25 +71,7 @@ export default function ProjectComponent() {
             </p>
             <div className="seperator"></div>
             <div className="filters">
-                <FilterProjectButtons showNewProjects={showNewProjects} filters={[
-                    { Name: 'All', id: 'all-projects' },
-                    { Name: 'JavaScript', id: 'JS' },
-                    { Name: 'Bootstrap', id: 'Bootstrap' },
-                    { Name: 'Java', id: 'Java' },
-                    { Name: 'React', id: 'React' },
-                    { Name: 'Python', id: 'Python' },
-                    { Name: 'SQL', id: 'SQL' },
-                    { Name: 'Node.js', id: 'Node.js' },
-                    { Name: 'MongoDB', id: 'MongoDB' },
-                    { Name: 'Self Teaching', id: 'Self-Teaching' },
-                    { Name: 'Bootcamp', id: 'Bootcamp' },
-                    { Name: 'Tech Repairs and Upgrades', id: 'Tech Enhancement' },
-                    { Name: 'PWA', id: 'PWA' },
-                    { Name: 'WebPack', id: 'WebPack' },
-                    { Name: 'GraphQL', id: 'GraphQL' },
-                    { Name: 'IndexDB', id: 'IndexDB' },
-                    { Name: 'MERN Stack', id: 'MERN Stack' },
-                ]} />
+                <FilterProjectButtons showNewProjects={showNewProjects} filters={filterBtns} />
             </div>
             <div className="project-container">
                 <Projects DisplayedProjects={DisplayedProjects} projects={[

@@ -1,22 +1,14 @@
+// Importing Module
+import { setActive } from "../utils/utils";
+
 export default function FilterProjectButtons({ filters, showNewProjects }) {
     const filter = ({ id, parentElement, classList }) => {
-
         // Displaying Projects that only contains the id/Tag
         showNewProjects(id);
-
-        // Grabbing each elements classList to see which one was active, and removing the active class
-        // Fix Time Complexity
-        for (let { children } of parentElement.parentElement.children) {
-            for (let { classList } of children) {
-                if (classList[1] === 'active') classList.remove('active');
-            }
-        }
-
-        // Adding the active class to the btn the user clicked on to filter
-        classList.add('active');
+        setActive(parentElement.parentElement, classList);
     }
 
-    return filters.map(({ Name, id }, i) => {
+    return filters.map(({ Name }, i) => {
         let classes = 'project-filter-btn';
         if (Name === 'All') classes += ' active';
         return (
@@ -24,7 +16,7 @@ export default function FilterProjectButtons({ filters, showNewProjects }) {
                 <button
                     onClick={({ target }) => filter(target)}
                     className={classes}
-                    id={id}>
+                    id={Name}>
                     {Name}
                 </button>
             </span>

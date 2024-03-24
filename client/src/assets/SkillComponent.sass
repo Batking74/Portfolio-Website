@@ -1,0 +1,31 @@
+/* Styling Skill Section */
+.skill-container
+    position: relative
+    margin-top: 100px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 20px
+
+.skill-card
+    height: 200px
+    border-radius: 10px
+    border: 1px solid #615b17
+    text-align: center
+    position: relative
+    cursor: pointer
+    transition: .5s
+
+.skill
+    font-size: 2rem
+    color: #655f17
+    line-height: 200px
+
+.skill-card:hover,
+.skill-card:active
+    background: var(--bg)
+    transform: scale(1.1)
+    transform: translateY(-15px)
+
+.skill-card:hover .skill,
+.skill-card:active .skill
+    color: #fff
