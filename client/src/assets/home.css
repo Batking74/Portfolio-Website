@@ -120,11 +120,6 @@ body {
   width: 50%;
 }
 
-.home-content span {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 /* Coloring all Targeted words/letters */
 .highlight {
   color: #8c8320;
@@ -177,7 +172,6 @@ body {
   position: relative;
   left: 80px;
   z-index: -1;
-  font-family: cursive;
   bottom: 220px;
 }
 
@@ -691,8 +685,7 @@ body {
   }
   .image {
     width: 300px;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 300px;
     margin: 40px;
   }
   .home-content {
