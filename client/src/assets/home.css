@@ -685,7 +685,7 @@ body {
     padding-bottom: 50px;
   }
   .home .image {
-    width: 300px;
+    max-width: 300px;
     height: -moz-fit-content;
     height: fit-content;
     margin: 40px;
