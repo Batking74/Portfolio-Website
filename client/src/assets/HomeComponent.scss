@@ -1,24 +1,3 @@
-// Importing Modules
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    position: relative;
-    background: linear-gradient(90deg, #000000, #8f1616, #000000);
-    color: #e1dad5;
-    font-family: 'roboto', sans-serif;
-}
-
-
 /* Styling Home Section */
 .home {
     width: 100%;
@@ -30,115 +9,112 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
+
+    /* Portfolio Heading */
+    .home-heading {
+        font-size: 5rem;
+        text-transform: capitalize;
+    }
+
+
+    /* Home Content Container */
+    .home-content {
+        width: 50%;
+    }
+
+
+    /* Coloring all Targeted words/letters */
+    .highlight {
+        color: #8c8320;
+    }
+
+
+    /* Creating and Styling Profession Background */
+    .profession {
+        width: fit-content;
+        display: block;
+        margin: 10px 0 20px auto;
+        text-transform: capitalize;
+        position: relative;
+        padding: 10px 20px;
+        color: #1d1d1d;
+        z-index: 2;
+    }
+
+
+    /* Profession */
+    .profession::before,
+    .profession::after {
+        content: '';
+        position: absolute;
+        background: #e3e3e3;
+        top: 0;
+    }
+
+
+    /* Profession */
+    .profession::before {
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transform: skewX(10deg);
+    }
+
+
+    /* Profession */
+    .profession::after {
+        left: -100px;
+        width: 100px;
+        height: 2px;
+    }
+
+
+    /* Home Image of 14 year old Naz */
+    .image {
+        max-width: 400px;
+    }
+
+    .home-img-caption {
+        position: relative;
+        left: 80px;
+        z-index: -1;
+        bottom: 220px;
+    }
+
+    .imgCap1-style {
+        transition: 1s;
+        width: fit-content;
+        background: #dacd15b9;
+        font-size: 15px;
+        left: 70px;
+        color: black;
+        border-radius: 30px;
+        padding: 15px;
+    }
+
+
+    /* Home Description */
+    .info {
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+
+
+    /* Countdown Text */
+    #Countdown-Text {
+        color: #e2d220;
+    }
+
+
+    /* Countdown Number */
+    #countdown {
+        color: #d81919;
+    }
 }
 
-
-/* Portfolio Heading */
-.home-heading {
-    font-size: 5rem;
-    text-transform: capitalize;
-}
-
-
-/* Home Content Container */
-.home-content {
-    width: 50%;
-}
-
-
-/* Coloring all Targeted words/letters */
-.highlight {
-    color: #8c8320;
-}
-
-
-/* Creating and Styling Profession Background */
-.profession {
-    width: fit-content;
-    display: block;
-    margin: 10px 0 20px auto;
-    text-transform: capitalize;
-    position: relative;
-    padding: 10px 20px;
-    color: #1d1d1d;
-    z-index: 2;
-}
-
-
-/* Profession */
-.profession::before,
-.profession::after {
-    content: '';
-    position: absolute;
-    background: #e3e3e3;
-    top: 0;
-}
-
-
-/* Profession */
-.profession::before {
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transform: skewX(10deg);
-}
-
-
-/* Profession */
-.profession::after {
-    left: -100px;
-    width: 100px;
-    height: 2px;
-}
-
-
-/* Home Image of 14 year old Naz */
-.image {
-    max-width: 400px;
-}
-
-.home-img-caption {
-    position: relative;
-    left: 80px;
-    z-index: -1;
-    bottom: 220px;
-}
-
-.imgCap1-style {
-    transition: 1s;
-    width: fit-content;
-    background: #dacd15b9;
-    font-size: 15px;
-    top: 20px;
-    color: black;
-    border-radius: 30px;
-    padding: 15px;
-}
-
-
-/* Home Description */
-.info {
-    line-height: 30px;
-    margin-bottom: 50px;
-}
-
-
-/* Countdown Text */
-#Countdown-Text {
-    color: #e2d220;
-}
-
-
-/* Countdown Number */
-#countdown {
-    color: #d81919;
-}
-
-
-/* Styling Home Buttons */
-.btn,
-#resumeBtn {
+/* Styling Home and Selected Buttons */
+.btn, #resumeBtn {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 25px;
@@ -148,7 +124,6 @@ body {
     text-transform: capitalize;
     transition: 2s;
 }
-
 
 /* Home Buttons */
 .btn:hover,
@@ -169,33 +144,15 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* Styling Certificate Section */
 .certificate-container {
     margin-top: 70px;
+    .certificate-description {
+        font-weight: 300;
+        font-size: 15.5px;
+        text-align: center;
+    }
 }
-
-.certificate-description {
-    font-weight: 300;
-    font-size: 15.5px;
-    text-align: center;
-}
-
-
-
-
-
-
-
 
 
 /* Toggle Background Colors on click */
@@ -204,211 +161,10 @@ body {
 }
 
 
-
 /* Text Color Toggle */
 .changeTextColor {
     background: linear-gradient(red, yellow, red);
     /* Adjust colors as needed */
     -webkit-background-clip: text;
     color: transparent;
-}
-
-
-/* tablet view */
-@media (max-width: 1055px) {
-    html {
-        font-size: 14px;
-    }
-
-    .home-img-caption {
-        left: 60px;
-    }
-
-    .imgCap1-style {
-        top: -10px;
-    }
-
-    /* Toggle btn */
-    .toggle-btn {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        right: 10vw;
-        cursor: pointer;
-    }
-
-    .toggle-btn span {
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #fff;
-        top: 30%;
-        transition: .5s;
-    }
-
-    .toggle-btn span:nth-child(2) {
-        top: 70%;
-    }
-
-    .toggle-btn.active span:nth-child(1) {
-        top: 50%;
-        transform: rotate(45deg);
-    }
-
-    .toggle-btn.active span:nth-child(2) {
-        top: 50%;
-        transform: rotate(-45deg);
-    }
-
-    /* links */
-    .links-container {
-        position: absolute;
-        top: 60px;
-        background-color: #1d1d1d;
-        width: 100%;
-        left: 0;
-        padding: 0 10vw;
-        flex-direction: column;
-        transition: .5s;
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    .links-container.show {
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    .link {
-        margin-left: auto;
-        text-align: center;
-        display: block;
-        height: 50px;
-    }
-
-    /* home section */
-    .home {
-        flex-direction: column-reverse;
-        height: fit-content;
-        padding-bottom: 50px;
-    }
-
-    .image {
-        width: 300px;
-        height: 300px;
-        margin: 40px;
-    }
-
-    .home-content {
-        width: 70%;
-        min-width: 350px;
-        text-align: center;
-    }
-
-    .home-heading {
-        font-size: 4.5rem;
-    }
-
-    /* about-section */
-    .about-me-container {
-        grid-template-columns: 1fr;
-    }
-
-    .left-col {
-        margin: auto;
-        width: 50%;
-        min-width: 320px;
-    }
-
-    .skill-container,
-    .project-container,
-    .certificate-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .certificate-description {
-        font-size: 13.5px;
-    }
-
-    .skill-card {
-        /* important value overwrites everything in the class with the new styles aka grid-column. */
-        grid-column: 1 span !important;
-    }
-
-    .project-name {
-        font-size: 2rem;
-    }
-
-    .tags {
-        font-size: 1.2rem;
-    }
-
-    /* Footer */
-    .footer div img {
-        margin-top: 30px;
-        width: 100%;
-    }
-}
-
-
-/* mobile view */
-@media (max-width: 500px) {
-    html {
-        font-size: 12px;
-    }
-
-    p,
-    .sub-heading,
-    .about-paragraph,
-    .left-col::before,
-    .tags {
-        font-size: 1.4rem;
-    }
-
-    .about-image {
-        width: 90%;
-        margin: auto;
-        display: block;
-        height: 340px;
-    }
-
-    .skill-container,
-    .project-container,
-    .certificate-container {
-        grid-template-columns: 1fr;
-    }
-
-    .certificate-description {
-        font-size: 20px;
-    }
-
-    .skill {
-        font-size: 2.5rem;
-    }
-
-    .project-name {
-        font-size: 3rem;
-    }
-
-    .name {
-        flex-direction: column;
-    }
-
-    .name input {
-        width: 100%;
-    }
-
-    .first-name {
-        margin-bottom: 20px !important;
-    }
-
-    /* Footer */
-    .footer div img {
-        margin-top: 15px;
-        max-width: 35px;
-    }
-
-    .footer p {
-        font-size: 12.5px;
-    }
 }

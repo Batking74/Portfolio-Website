@@ -1,21 +1,22 @@
 export default function AboutComponent() {
 
     // Speechsynthesis Button
-    const readAloud = ({ target }) => {
+    const readAloud = () => {
         const { textContent } = document.getElementById('ReadTextAI');
-        if (target.dataset.toggle === 'off') {
-            target.dataset.toggle = 'on';
+        const btn = document.getElementById('play-button');
+        if (btn.dataset.toggle === 'off') {
+            btn.dataset.toggle = 'on';
 
             // Allows Speechsynthesis to speak
             const utterance = new SpeechSynthesisUtterance(textContent);
             utterance.rate = 1;
             speechSynthesis.speak(utterance);
-            target.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
+            btn.innerHTML = `<svg style="width: 20px; height: 20px" viewBox="0 0 24 24"><path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg>`;
         }
         else {
-            target.dataset.toggle = 'off';
+            btn.dataset.toggle = 'off';
             speechSynthesis.cancel();
-            target.innerHTML = 'Read Aloud';
+            btn.innerHTML = 'Read Aloud';
         }
     }
 

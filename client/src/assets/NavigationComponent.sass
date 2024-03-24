@@ -1,3 +1,13 @@
+html
+    scroll-behavior: smooth
+
+body
+    width: 100%
+    position: relative
+    background: linear-gradient(90deg, #000000, #8f1616, #000000)
+    color: #e1dad5
+    font-family: 'roboto', sans-serif
+
 /* Navigation */
 .navbar
     position: fixed
@@ -23,12 +33,10 @@
     color: #e1dad5
     font-family: Georgia, 'Times New Roman', Times, serif
 
-
 /* Navigation Link Container */
 .links-container
     display: flex
     list-style: none
-
 
 /* Styling each individual link */
 .link
@@ -43,7 +51,6 @@
 .link:hover:not(.active)
     opacity: 0.7
 
-
 /* Creating and Stylinging Navigation Tracker */
 .link.active::before,
 .seperator::before,
@@ -51,7 +58,6 @@
 .seperator::after
     content: ''
     position: absolute
-
 
 /* Navigation Tracker */
 .link.active::before,
@@ -63,7 +69,6 @@
     height: 5px
     border-radius: 50%
     background: #e1dad5
-
 
 /* Navigation Tracker */
 .link.active::after,
@@ -78,17 +83,15 @@
 .changeNavColorByToggle
     background: linear-gradient(90deg, #0000ff, #131313b1, #0000ff)
 
-
 .App-logo
     width: 60px
 
-
 .App-logo::selection,
-.App-logo2::selection 
+.App-logo2::selection
     display: none
 
 @media (prefers-reduced-motion: no-preference)
-    .App-logo 
+    .App-logo
         animation: App-logo-spin infinite 20s linear
 
 @keyframes App-logo-spin

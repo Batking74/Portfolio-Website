@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm i && vite build",
-    "sass": "node-sass src/assets/output/style.sass src/assets/output/styles.css"
+    "sass": "node-sass src/assets/output/style.scss src/assets/output/styles.css"
   },
   "dependencies": {
     "react": "^18.2.0",
