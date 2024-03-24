@@ -10,7 +10,7 @@ import HomeComponent from "../components/HomeComponent";
 import Navigation from "../components/Navigation";
 
 // Importing Stylesheets
-import '../assets/styles.css';
+import '../assets//output/styles.css';
 
 export default function HomePage() {
     return (
