@@ -120,6 +120,11 @@ body {
   width: 50%;
 }
 
+.home-content span {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 /* Coloring all Targeted words/letters */
 .highlight {
   color: #8c8320;
@@ -684,7 +689,7 @@ body {
     height: fit-content;
     padding-bottom: 50px;
   }
-  .home .image {
+  .image {
     width: 300px;
     height: -moz-fit-content;
     height: fit-content;
