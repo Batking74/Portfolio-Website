@@ -351,18 +351,6 @@ body {
 }
 
 
-/* Resizing Project Names and Tags */
-@media (max-width: 695px) {
-    .project-name {
-        font-size: 1.5rem;
-    }
-
-    .tags {
-        font-size: 0.8rem;
-    }
-}
-
-
 /* mobile view */
 @media (max-width: 500px) {
     html {
