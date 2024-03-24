@@ -1,19 +1,8 @@
+// Importing Module
+import { setActive } from "./utils/utils";
+
+
 export default function Navigation() {
-    
-    const toggleLink = ({ parentElement, classList }) => {
-        // Grabbing each nav links children
-        for (let { children } of parentElement.parentElement.children) {
-
-            // Grabbing each classList from 'a' links to see which one was active, and removing the active class
-            // Fix Time Complexity
-            for (let { classList } of children) {
-                if (classList[1] === 'active') classList.remove('active');
-            }
-        }
-
-        // Adding the active class to the link the user clicked on to filter
-        classList.add('active');
-    }
 
     // Toggle Navbar
     const toggleNavBar = ({ classList }) => {
@@ -52,7 +41,12 @@ export default function Navigation() {
                         let classes = 'link';
                         if (Href === '#') classes += ' active';
                         return (
-                            <li key={i + 1} onClick={({ target }) => toggleLink(target)} className="links-item">
+                            <li
+                                key={i + 1}
+                                onClick={({ target }) => {
+                                    setActive(target.parentElement.parentElement, target.classList)
+                                }}
+                                className="links-item">
                                 <a href={Href} className={classes}>{LinkName}</a>
                             </li>
                         );
