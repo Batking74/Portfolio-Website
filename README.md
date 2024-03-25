@@ -12,7 +12,7 @@ Welcome to my personal website portfolio! This project showcases my skills, proj
 - CSS
 - JavaScript
 - React
-- Sass
+- Sass/Scss
 
 Deployed Site: https://portfolio-website-0sf0.onrender.com/
 

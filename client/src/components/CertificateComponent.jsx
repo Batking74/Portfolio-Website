@@ -10,7 +10,7 @@ export default function CertificateComponent() {
 
                 {/* Prompt Engineering Certificate */}
                 <a
-                    href="/images/credentials/Nazir_Knuckles_Portfolio_Resume.pdf" className="project-card">
+                    href="https://courses.edx.org/certificates/b29eb7a5f59b4bc1b109ad6ecab511ca" className="project-card">
                     <img
                         loading="lazy"
                         src="/images/credentials/Nazirs_edX_Prompt_Engineering_Certificate.webp"
