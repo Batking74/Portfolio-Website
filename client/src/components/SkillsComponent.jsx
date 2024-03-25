@@ -232,12 +232,6 @@ export default function SkillsComponent() {
             isInTechArsenal: false
         },
         {
-            Skill: 'Soldering',
-            BackgroundColor: '#D515B2',
-            SkillSize: null,
-            isInTechArsenal: false
-        },
-        {
             Skill: 'Python',
             BackgroundColor: '#0071e2',
             SkillSize: null,
@@ -265,6 +259,30 @@ export default function SkillsComponent() {
             Skill: 'More Computer Science',
             BackgroundColor: '#7c7b94',
             SkillSize: 16,
+            isInTechArsenal: false
+        },
+        {
+            Skill: 'WebRTC',
+            BackgroundColor: '#45109c',
+            SkillSize: 16,
+            isInTechArsenal: false
+        },
+        {
+            Skill: 'Web Sockets',
+            BackgroundColor: '#c91212',
+            SkillSize: 17,
+            isInTechArsenal: false
+        },
+        {
+            Skill: 'Socket.io',
+            BackgroundColor: '#f7316d',
+            SkillSize: 17,
+            isInTechArsenal: false
+        },
+        {
+            Skill: 'React Native',
+            BackgroundColor: '#178afc',
+            SkillSize: 17,
             isInTechArsenal: false
         },
     ];
