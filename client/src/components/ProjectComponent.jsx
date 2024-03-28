@@ -226,6 +226,12 @@ export default function ProjectComponent() {
                         url: 'https://www.youtube.com/watch?v=4ukkirWouOk'
                     },
                     {
+                        Name: 'OpenChat',
+                        HashTags: `${node} ${mern} ${mongodb} ${graphql} ${react} ${bootcamp}`,
+                        Image: `${path}/OpenChat_Project.webp`,
+                        url: 'https://openchat-0ptg.onrender.com/'
+                    },
+                    {
                         Name: 'Computer Repairs',
                         HashTags: `${techEnhancement} ${selfTeach}`,
                         Image: `${path}/Placeholder.webp`,
