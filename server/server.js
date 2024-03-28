@@ -5,7 +5,6 @@ const app = express();
 const { join } = require('path');
 const PORT = process.env.PORT || 4000;
 
-
 // Serving up frontend once server starts
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(join(__dirname, '../client/dist')));
