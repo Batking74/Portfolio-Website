@@ -1,5 +1,4 @@
 export default function Certificates({ props }) {
-    console.log(props)
     return props.map(({ Image, Link, Description, AltText, Tags }, i) => {
         return (
             <a href={Link} key={i + 1} className="project-card">

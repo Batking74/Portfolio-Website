@@ -12,6 +12,12 @@ Welcome to my personal website portfolio! This project showcases my skills, proj
 - CSS
 - JavaScript
 - React
+- GraphQL
+- MongoDB
+- Node.js
+- Mongoose (ODM)
+- Apollo
+- Express
 - Sass/Scss
 
 Deployed Site: https://portfolio-website-0sf0.onrender.com/
