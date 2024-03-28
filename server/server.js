@@ -2,12 +2,17 @@
 const { connection } = require('./database/database');
 const express = require('express');
 const app = express();
+const { join } = require('path');
 const PORT = process.env.PORT || 4000;
 
-// Test route for when I deploy
-app.get('/Test', (req, res) => {
-    res.json({ Name: 'Nazir', Lastname: 'King'});
-})
+// Serving up frontend once server starts
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(join(__dirname, '../client/dist')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(join(__dirname, '../client/dist/index.html'));
+    });
+}
 
 // Listening for database connection
 connection.once('open', () => {
@@ -16,5 +21,6 @@ connection.once('open', () => {
     // Starting Server
     app.listen(PORT, () => {
         console.log(`Listening on Port ${PORT}!`);
+        // Middleware
     });
 });
